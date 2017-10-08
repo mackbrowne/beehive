@@ -15,7 +15,7 @@ import NavigationItem from "./NavigationItem";
  * @returns {Element} Stateless functional React component.
  */
 const Navigation = ({
-  navigationItems
+  navigationItems = []
 }: {
   navigationItems: Array<StatefulLink>
 }): StatelessComponent =>

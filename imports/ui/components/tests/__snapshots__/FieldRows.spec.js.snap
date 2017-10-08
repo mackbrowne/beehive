@@ -48,3 +48,32 @@ exports[`<FieldRows /> FieldRows SnapShot renders FieldRows correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`<FieldRows /> FieldRows SnapShot renders FieldRows correctly with default props 1`] = `
+<div
+  className="field-rows px-0 container-fluid"
+>
+  <div
+    className="no-gutters row"
+  >
+    <div
+      className="col"
+    >
+      <h3>
+        Fields
+      </h3>
+    </div>
+  </div>
+  <div
+    className="no-gutters row"
+  >
+    <div
+      className="col"
+    >
+      <form
+        className=""
+      />
+    </div>
+  </div>
+</div>
+`;

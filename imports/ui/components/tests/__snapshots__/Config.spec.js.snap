@@ -62,3 +62,46 @@ exports[`<Config /> Config SnapShot renders config correctly 1`] = `
   </div>
 </aside>
 `;
+
+exports[`<Config /> Config SnapShot renders config correctly with default props 1`] = `
+<aside>
+  <div
+    className="config container-fluid"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="field-rows px-0 container-fluid"
+        >
+          <div
+            className="no-gutters row"
+          >
+            <div
+              className="col"
+            >
+              <h3>
+                Configuration
+              </h3>
+            </div>
+          </div>
+          <div
+            className="no-gutters row"
+          >
+            <div
+              className="col"
+            >
+              <form
+                className=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+`;

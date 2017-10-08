@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> Navigation SnapShot renders Navigation with items correctly 1`] = `
+<nav
+  className="navigation"
+>
+  <div
+    className="container-fluid"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="text-center p-1 col"
+      >
+        <a
+          className="navigation-item"
+          href="/settings"
+          onClick={[Function]}
+        >
+          settings
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`<Navigation /> Navigation SnapShot renders Navigation with no items 1`] = `
+<nav
+  className="navigation"
+>
+  <div
+    className="container-fluid"
+  >
+    <div
+      className="row"
+    />
+  </div>
+</nav>
+`;

@@ -8,16 +8,10 @@ import { INIT } from "../actionTypes/generic";
 
 // Action Creators
 import fetchBeesRequest from "../actionCreators/bees/fetchBeesRequest";
-import asyncInitFailed from "../actionCreators/bees/asyncInitFailed";
 
 // Worker
 export function* initializeAsyncStateWorker(action: Action) {
-  try {
-    yield put(fetchBeesRequest());
-  } catch ({ message = "No error message specified." }) {
-    console.error(message);
-    yield put(asyncInitFailed());
-  }
+  yield put(fetchBeesRequest());
 }
 
 // Watcher

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationItem /> NavigationItem SnapShot renders NavigationItem with items correctly 1`] = `
+<a
+  className="navigation-item"
+  href="/settings"
+  onClick={[Function]}
+>
+  settings
+</a>
+`;
+
+exports[`<NavigationItem /> NavigationItem SnapShot renders NavigationItem with no items 1`] = `
+<a
+  className="navigation-item"
+  href="/"
+  onClick={[Function]}
+>
+  Home
+</a>
+`;

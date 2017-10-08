@@ -1,20 +1,28 @@
 import React from "react";
 import ReactTestRenderer from "react-test-renderer";
-import { configure, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-15";
 
 import Game from "../Game";
 
-configure({ adapter: new Adapter() });
-
 describe("<Game />", () => {
-  const defaultProps = {
-    bees: [],
-    removeBee: jest.fn()
-  };
+  let defaultProps;
 
   describe("Game SnapShot", () => {
-    it("renders Game correctly", () => {
+    beforeEach(() => {
+      defaultProps = {
+        bees: [{ _id: 123, name: "testBee", type: "worker" }],
+        removeBee: jest.fn()
+      };
+    });
+
+    it("renders game with no bees correctly", () => {
+      delete defaultProps.bees;
+      const tree = ReactTestRenderer.create(
+        <Game {...defaultProps} />
+      ).toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    it("renders game with bees correctly", () => {
       const tree = ReactTestRenderer.create(
         <Game {...defaultProps} />
       ).toJSON();

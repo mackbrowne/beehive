@@ -62,3 +62,46 @@ exports[`<Settings /> Settings SnapShot renders Settings correctly 1`] = `
   </div>
 </aside>
 `;
+
+exports[`<Settings /> Settings SnapShot renders Settings correctly with default props 1`] = `
+<aside>
+  <div
+    className="settings container-fluid"
+  >
+    <div
+      className="no-gutters row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="field-rows px-0 container-fluid"
+        >
+          <div
+            className="no-gutters row"
+          >
+            <div
+              className="col"
+            >
+              <h3>
+                Settings
+              </h3>
+            </div>
+          </div>
+          <div
+            className="no-gutters row"
+          >
+            <div
+              className="col"
+            >
+              <form
+                className=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+`;

@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppLayout /> AppLayout SnapShot renders config correctly with default props 1`] = `
+<div
+  className="app px-0 container-fluid"
+>
+  <div
+    className="bg-faded row"
+  >
+    <div
+      className="col"
+    >
+      <header
+        className="py-4 text-center"
+      >
+        <h1>
+          Beehive Simulator
+        </h1>
+      </header>
+    </div>
+  </div>
+  <div
+    className="bg-faded row"
+  >
+    <div
+      className="col"
+    >
+      <nav
+        className="navigation"
+      >
+        <div
+          className="container-fluid"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="text-center p-1 col"
+            >
+              <a
+                className="navigation-item"
+                href="/"
+                onClick={[Function]}
+              >
+                Game
+              </a>
+            </div>
+            <div
+              className="text-center p-1 col"
+            >
+              <a
+                className="navigation-item"
+                href="/settings"
+                onClick={[Function]}
+              >
+                Settings
+              </a>
+            </div>
+            <div
+              className="text-center p-1 col"
+            >
+              <a
+                className="navigation-item"
+                href="/config"
+                onClick={[Function]}
+              >
+                Config
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div
+    className="no-gutters row"
+  >
+    <div
+      className="col"
+    >
+      <main>
+        <div
+          className="not-found container"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col"
+            >
+              <p>
+                <strong>
+                  Error [404]
+                </strong>
+                : 
+                blank
+                 does not exist.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <footer
+        className="py-1 text-center"
+      >
+        <p>
+          Created by: 
+          <a
+            href="https://mackiedrew.com/"
+          >
+            Mackie Drew
+          </a>
+        </p>
+      </footer>
+    </div>
+  </div>
+</div>
+`;

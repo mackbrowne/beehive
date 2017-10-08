@@ -1,22 +1,39 @@
 import React from "react";
 import ReactTestRenderer from "react-test-renderer";
-import { configure, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-15";
+import { shallow } from "enzyme";
 
 import FieldRow from "../FieldRow";
 import { Input, Label } from "reactstrap";
 
-configure({ adapter: new Adapter() });
-
 describe("<FieldRow />", () => {
-  const defaultProps = {
-    label: "NewField",
-    value: 15,
-    visibleLabel: false,
-    stateSettingAction: jest.fn()
-  };
+  let defaultProps;
 
   describe("FieldRow SnapShot", () => {
+    beforeEach(() => {
+      defaultProps = {
+        label: "NewField",
+        value: 15,
+        visibleLabel: false,
+        stateSettingAction: jest.fn()
+      };
+    });
+
+    it("renders FieldRow correctly with default props", () => {
+      delete defaultProps.label;
+      delete defaultProps.visibleLabel;
+      const tree = ReactTestRenderer.create(
+        <FieldRow {...defaultProps} />
+      ).toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    it("renders FieldRow correctly", () => {
+      const tree = ReactTestRenderer.create(
+        <FieldRow {...defaultProps} />
+      ).toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
     it("renders FieldRow correctly", () => {
       const tree = ReactTestRenderer.create(
         <FieldRow {...defaultProps} />

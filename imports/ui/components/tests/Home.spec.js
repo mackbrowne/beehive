@@ -1,22 +1,22 @@
 import React from "react";
 import ReactTestRenderer from "react-test-renderer";
-import { configure, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-15";
+import { shallow } from "enzyme";
 
 import Home from "../Home";
 
 import { Button } from "reactstrap";
 
-configure({ adapter: new Adapter() });
-
 describe("<Home />", () => {
-  const defaultProps = {
-    toggleSideBar: jest.fn(),
-    sideBarOpen: false
-  };
+  let defaultProps;
+  beforeEach(() => {
+    defaultProps = {
+      toggleSideBar: jest.fn(),
+      sideBarOpen: true
+    };
+  });
 
   describe("Home Props", () => {
-    let wrapper, button;
+    let button;
 
     beforeEach(() => {
       const wrapper = shallow(<Home {...defaultProps} />);
