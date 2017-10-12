@@ -1,6 +1,5 @@
-// Testing
-import { Meteor } from "meteor/meteor";
-import { testSaga, expectSaga } from "redux-saga-test-plan";
+//Testing
+import { testSaga } from "redux-saga-test-plan";
 import * as matchers from "redux-saga-test-plan/matchers";
 import { throwError } from "redux-saga-test-plan/providers";
 
