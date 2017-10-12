@@ -37,8 +37,6 @@
     "autoprefixer": "7.1.2",
     "babel-eslint": "7.2.3",
     "babel-jest": "21.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "6.24.1",
@@ -98,10 +96,6 @@
       "env",
       "flow",
       "react"
-    ],
-    "plugins": [
-      "transform-object-rest-spread",
-      "transform-regenerator"
     ]
   },
   "postcss": {
