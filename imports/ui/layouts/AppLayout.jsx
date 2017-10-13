@@ -58,7 +58,7 @@ const AppLayout = ({
       <Col>
         <footer className="py-1 text-center">
           <p>
-            Created by: <a href="https://mackiedrew.com/">Mackie Drew</a>
+            Created by: <a href="https://mackbrowne.com/">Mack Browne</a> and <a href="https://mackiedrew.com">Mackie Drew</a>
           </p>
         </footer>
       </Col>

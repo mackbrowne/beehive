@@ -2,7 +2,7 @@
   "name": "beehive",
   "private": false,
   "license": "MIT",
-  "repository": "http://github.com/mackiedrew/beehive/",
+  "repository": "http://github.com/mackbrowne/beehive/",
   "scripts": {
     "start": "MONGO_URL=mongodb://localhost:27017/beehive meteor run",
     "flow": "./node_modules/.bin/flow check",
