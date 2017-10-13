@@ -73,8 +73,8 @@
       "<rootDir>/node_modules/"
     ],
     "moduleNameMapper": {
-      "^(.*):(.*)$": "$1_$2",
-      "meteor/(.*)": "<rootDir>/node_modules/jest-meteor-stubs/lib/meteor/$1.js"
+      "^(.*):(.*)$": "<rootDir>/node_modules/jest-meteor-stubs/lib/$1_$2",
+      "meteor/(.*)": "<rootDir>/node_modules/jest-meteor-stubs/lib/meteor/$1"
     },
     "unmockedModulePathPatterns": [
       "/^imports\\/.*\\.jsx?$/",
