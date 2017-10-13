@@ -37,8 +37,6 @@
     "autoprefixer": "7.1.5",
     "babel-eslint": "8.0.1",
     "babel-jest": "21.2.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "6.24.1",
@@ -75,8 +73,8 @@
       "<rootDir>/node_modules/"
     ],
     "moduleNameMapper": {
-      "^(.*):(.*)$": "$1_$2",
-      "meteor/(.*)": "<rootDir>/node_modules/jest-meteor-stubs/lib/meteor/$1.js"
+      "^(.*):(.*)$": "<rootDir>/node_modules/jest-meteor-stubs/lib/$1_$2",
+      "meteor/(.*)": "<rootDir>/node_modules/jest-meteor-stubs/lib/meteor/$1"
     },
     "unmockedModulePathPatterns": [
       "/^imports\\/.*\\.jsx?$/",
@@ -98,10 +96,6 @@
       "env",
       "flow",
       "react"
-    ],
-    "plugins": [
-      "transform-object-rest-spread",
-      "transform-regenerator"
     ]
   },
   "postcss": {
