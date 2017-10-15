@@ -10,26 +10,22 @@ import toggleSideBar from "../actionCreators/ui/toggleSideBar";
 import Home from "../components/Home";
 
 // Connect the STATE to the props fed into the component.
-export const mapStateToProps = (state             )                     => {
+export const mapStateToProps = (state) => {
   return {
     sideBarOpen: state.ui.sideBarOpen
   };
 };
 
 // Connect ACTIONS to the props fed into the component.
-export const mapDispatchToProps = (
-  dispatch
-)                        => {
+export const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
-    {
-      toggleSideBar: toggleSideBar
-    },
+    { toggleSideBar: toggleSideBar },
     dispatch
   );
 };
 
 // Create higher-order component which feeds in specified props.
-const HomeContainer                     = connect(
+const HomeContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Home);

@@ -10,23 +10,19 @@ import removeBeeRequest from "../actionCreators/bees/removeBeeRequest";
 import Game from "../components/Game";
 
 // Connect the STATE to the props fed into the component.
-export const mapStateToProps = (state             )                     => {
-  return {
-    bees: state.bees.bees
-  };
+export const mapStateToProps = (state) => {
+  return { bees: state.bees.bees };
 };
 
 // Connect ACTIONS to the props fed into the component.
-export const mapDispatchToProps = (
-  dispatch
-)                        => {
+export const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     removeBee: removeBeeRequest
   }, dispatch);
 };
 
 // Create higher-order component which feeds in specified props.
-const GameContainer                     = connect(
+const GameContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Game);
