@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 import { Link } from "react-router-dom";
@@ -13,10 +11,10 @@ import { Link } from "react-router-dom";
 const NavigationItem = ({
   label = "Home",
   path = "/"
-}: {
-  label: string,
-  path: string
-}): StatelessComponent =>
+}
+
+
+ )                     =>
   <Link className="navigation-item" to={path}>
     {label}
   </Link>;

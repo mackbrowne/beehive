@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 import { connect } from "react-redux";
@@ -12,7 +10,7 @@ import setSettingsValue from "../actionCreators/settings/setSettingsValue";
 import Settings from "../components/Settings";
 
 // Connect the STATE to the props fed into the component.
-export const mapStateToProps = (state: StrictState): MappedStateToProps => {
+export const mapStateToProps = (state             )                     => {
   return {
     settingsFields: state.settings
   };
@@ -20,8 +18,8 @@ export const mapStateToProps = (state: StrictState): MappedStateToProps => {
 
 // Connect ACTIONS to the props fed into the component.
 export const mapDispatchToProps = (
-  dispatch: Dispatch
-): MappedDispatchToProps => {
+  dispatch
+)                        => {
   return bindActionCreators(
     {
       settingsSettingAction: setSettingsValue
@@ -31,7 +29,7 @@ export const mapDispatchToProps = (
 };
 
 // Create higher-order component which feeds in specified props.
-const SettingsContainer: StatelessComponent = connect(
+const SettingsContainer                     = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Settings);

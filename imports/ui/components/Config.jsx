@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 
@@ -16,10 +14,10 @@ import FieldRows from "./FieldRows";
 const Config = ({
   configFields = {},
   configSettingAction
-}: {
-  configFields: Fields,
-  configSettingAction: ((label: string, value: InputValue) => void) | void
-}): StatelessComponent =>
+}
+
+
+ )                     =>
   <aside>
     <Container className="config" fluid>
       <Row>

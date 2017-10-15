@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
@@ -13,7 +11,7 @@ import ConfigContainer from "../containers/ConfigContainer";
 import SettingsContainer from "../containers/SettingsContainer";
 import NotFound from "../components/NotFound";
 
-const navigationItems: Array<StatefulLink> = [
+const navigationItems                      = [
   { label: "Game", path: "/" },
   { label: "Settings", path: "/settings" },
   { label: "Config", path: "/config" }
@@ -26,9 +24,9 @@ const navigationItems: Array<StatefulLink> = [
  */
 const AppLayout = ({
   children
-}: {
-  children: StatelessComponent
-}): StatelessComponent =>
+}
+
+ )                     =>
   <Container className="app px-0" fluid>
     <Row className="bg-faded">
       <Col>

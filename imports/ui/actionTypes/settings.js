@@ -1,3 +1,1 @@
-// @flow
-
-export const SET_SETTINGS_VALUE: string = "SETTINGS/SET_SETTINGS_VALUE";
+export const SET_SETTINGS_VALUE = "SETTINGS/SET_SETTINGS_VALUE";

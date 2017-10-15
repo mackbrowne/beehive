@@ -1,10 +1,8 @@
-// @flow
-
 // Action Types
 import { REMOVE_ALL_BEES_SUCCESSFUL } from "../../actionTypes/bees";
 
 // Action Creator
-export const removeAllBeesSuccessful = (): Action => ({
+export const removeAllBeesSuccessful = () => ({
   type: REMOVE_ALL_BEES_SUCCESSFUL
 });
 

@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 
@@ -22,10 +20,10 @@ import {
 const BeeCard = ({
   bee: { _id, type, name },
   removeBee
-}: {
-  bee: Bee,
-  removeBee: () => void
-}): StatelessComponent => {
+}
+
+
+ )                     => {
   const remove = () => removeBee(_id);
 
   return (

@@ -1,5 +1,3 @@
-// Flow
-
 // Action Types
 import { SET_SETTINGS_VALUE } from "../../actionTypes/settings";
 

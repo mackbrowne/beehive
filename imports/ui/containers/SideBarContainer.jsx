@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 import { connect } from "react-redux";
@@ -16,7 +14,7 @@ import getNumberOfBees from "../selectors/bees/getNumberOfBees";
 import SideBar from "../components/SideBar";
 
 // Connect the STATE to the props fed into the component.
-export const mapStateToProps = (state: StrictState): MappedStateToProps => {
+export const mapStateToProps = (state             )                     => {
   return {
     numberOfBees: getNumberOfBees(state)
   };
@@ -24,8 +22,8 @@ export const mapStateToProps = (state: StrictState): MappedStateToProps => {
 
 // Connect ACTIONS to the props fed into the component.
 export const mapDispatchToProps = (
-  dispatch: Dispatch
-): MappedDispatchToProps => {
+  dispatch
+)                        => {
   return bindActionCreators(
     {
       createBee: createBeeRequest,
@@ -36,7 +34,7 @@ export const mapDispatchToProps = (
 };
 
 // Create higher-order component which feeds in specified props.
-const SideBarContainer: StatelessComponent = connect(
+const SideBarContainer                     = connect(
   mapStateToProps,
   mapDispatchToProps
 )(SideBar);

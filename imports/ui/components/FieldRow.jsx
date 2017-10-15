@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 
@@ -10,7 +8,7 @@ import { Container, Row, Col, FormGroup, Label, Input } from "reactstrap";
 import { camelCaseToTitle } from "../helpers/text";
 
 // Types
-type InputValue = string | boolean | number;
+
 
 /**
  * A single input field for a boolean, string or number.
@@ -23,16 +21,16 @@ const FieldRow = ({
   value,
   visibleLabel = true,
   stateSettingAction
-}: {
-  label: string,
-  value: InputValue,
-  stateSettingAction: ((label: string, value: InputValue) => void) | void,
-  visibleLabel: boolean | void
-}): StatelessComponent => {
-  const inputId: string = `${label}-${typeof value}-field-row-input`;
-  const titleLabel: string = camelCaseToTitle(label);
-  const labelClass: string = visibleLabel ? "" : "sr-only";
-  const onChange: Event => void = ({ target: { value } }) =>
+}
+
+
+
+
+ )                     => {
+  const inputId         = `${label}-${typeof value}-field-row-input`;
+  const titleLabel         = camelCaseToTitle(label);
+  const labelClass         = visibleLabel ? "" : "sr-only";
+  const onChange                = ({ target: { value } }) =>
     stateSettingAction(label, value);
   return (
     <FormGroup className="field-row">

@@ -5,8 +5,6 @@
   "repository": "http://github.com/mackbrowne/beehive/",
   "scripts": {
     "start": "MONGO_URL=mongodb://localhost:27017/beehive meteor run",
-    "flow": "./node_modules/.bin/flow check",
-    "flow:coverage": "./node_modules/.bin/flow-coverage-report",
     "lint": "./node_modules/.bin/eslint .",
     "lint:fix": "./node_modules/.bin/eslint . --fix",
     "lint:check": "./node_modules/.bin/eslint --print-config .eslintrc.js | ./node_modules/.bin/eslint-config-prettier-check",
@@ -38,18 +36,13 @@
     "babel-eslint": "7.2.3",
     "babel-jest": "21.0.0",
     "babel-preset-env": "1.6.0",
-    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "6.24.1",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-15": "^1.0.0",
     "eslint": "4.3.0",
     "eslint-config-prettier": "2.3.0",
-    "eslint-plugin-flowtype": "2.35.0",
     "eslint-plugin-prettier": "2.1.2",
     "eslint-plugin-react": "7.1.0",
-    "flow-bin": "0.51.1",
-    "flow-coverage-report": "0.3.0",
-    "flow-typed": "2.1.5",
     "husky": "0.14.3",
     "jest": "21.2.1",
     "jest-meteor-stubs": "github:mackbrowne/jest-meteor-stubs#master",
@@ -94,7 +87,6 @@
   "babel": {
     "presets": [
       "env",
-      "flow",
       "react"
     ]
   },
@@ -106,18 +98,5 @@
         ]
       }
     }
-  },
-  "flow-coverage-report": {
-    "includeGlob": [
-      "imports/**/*.js",
-      "imports/**/*.jsx"
-    ],
-    "type": [
-      "text",
-      "html",
-      "json"
-    ],
-    "outputDir": ".flow-coverage",
-    "threshold": 40
   }
 }

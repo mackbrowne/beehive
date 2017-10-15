@@ -1,16 +1,14 @@
-// @flow
-
 // Framework
 import { Meteor } from "meteor/meteor";
 import { Mongo } from "meteor/mongo";
 import SimpleSchema from "simpl-schema";
 
 class BeesCollection extends Mongo.Collection {
-  insert(bee: Bee, callback: Function): string {
+  insert(bee, callback) {
     // How many bee documents exist?
     const beesCursor = Bees.find({});
-    const numberOfBees: number = beesCursor.count();
-    const newNumberOfBees: number = numberOfBees + 1;
+    const numberOfBees = beesCursor.count();
+    const newNumberOfBees = numberOfBees + 1;
     // What should the name of the new bee be?
     const beeName = bee.name ? bee.name : `Bee #${newNumberOfBees}`;
     // What will the final state of the new bee object be?

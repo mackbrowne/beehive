@@ -1,5 +1,3 @@
-// @flow
-
 // Libraries
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
@@ -32,25 +30,18 @@ export const registerSagas = (sagaMiddleware, sagas) =>
  * @param  {State} initialState State object generated from indexed reducers.
  * @returns {Store} Generates an enhanced Redux Store.
  */
-export const configureStore = (initialState: ?State): Store => {
+export const configureStore = initialState => {
   // Create saga middleware
   const sagaMiddleware = createSagaMiddleware();
   // Create a function that can apply the saga middleware to a StoreCreator
-  const sagaStoreEnhancer: StoreEnhancer = applyMiddleware(sagaMiddleware);
+  const sagaStoreEnhancer = applyMiddleware(sagaMiddleware);
   // Create a function that can create a store with the new middleware
-  const createStoreWithMiddleWare: StoreCreator = sagaStoreEnhancer(
-    createStore
-  );
+  const createStoreWithMiddleWare = sagaStoreEnhancer(createStore);
   // Determine whether debug mode should be attached
-  const reduxDevTools: Function | void = window.__REDUX_DEVTOOLS_EXTENSION__;
-  const debug: Function =
-    typeof reduxDevTools === "function" ? reduxDevTools() : a => a;
+  const reduxDevTools = window.__REDUX_DEVTOOLS_EXTENSION__;
+  const debug = typeof reduxDevTools === "function" ? reduxDevTools() : a => a;
   // Actually create the store with the new middleware
-  const store: Store = createStoreWithMiddleWare(
-    rootReducer,
-    initialState,
-    debug
-  );
+  const store = createStoreWithMiddleWare(rootReducer, initialState, debug);
   // Register all sagas with middleware
   registerSagas(sagaMiddleware, combinedSagas());
   return store;

@@ -1,3 +1,1 @@
-// @flow
-
-export const INIT: string = "INIT";
+export const INIT = "INIT";

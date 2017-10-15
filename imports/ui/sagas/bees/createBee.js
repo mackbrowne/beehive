@@ -1,4 +1,3 @@
-// @flow
 // Framework
 import { Meteor } from "meteor/meteor";
 import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
@@ -12,7 +11,7 @@ import createBeeSuccessful from "../../actionCreators/bees/createBeeSuccessful";
 import fetchBeesRequest from "../../actionCreators/bees/fetchBeesRequest";
 
 // Worker
-export function* createBeeWorker(action: Action) {
+export function* createBeeWorker(action) {
   try {
     const callValues = { bee: action.payload };
     yield call(Meteor.callPromise, "bees.insert", callValues);

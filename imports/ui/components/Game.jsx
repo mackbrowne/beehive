@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 
@@ -16,10 +14,10 @@ import BeeCard from "./BeeCard";
 const Game = ({
   bees = [],
   removeBee
-}: {
-  bees: Array<Bee>,
-  removeBee: () => void
-}): StatelessComponent =>
+}
+
+
+ )                     =>
   <Container className="game" fluid>
     <Row noGutters>
       <Col>

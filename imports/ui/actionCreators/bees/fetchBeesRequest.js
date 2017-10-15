@@ -1,10 +1,8 @@
-// @flow
-
 // Action Types
 import { FETCH_BEES_REQUEST } from "../../actionTypes/bees";
 
 // Action Creator
-export const fetchBeesRequest = (bees: Array<Bees>): Action => ({
+export const fetchBeesRequest = bees => ({
   type: FETCH_BEES_REQUEST
 });
 

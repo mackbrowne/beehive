@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import { Meteor } from "meteor/meteor";
 import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
@@ -13,7 +11,7 @@ import removeBeeSuccessful from "../../actionCreators/bees/removeBeeSuccessful";
 import fetchBeesRequest from "../../actionCreators/bees/fetchBeesRequest";
 
 // Worker
-export function* removeBeeWorker(action: Action) {
+export function* removeBeeWorker(action) {
   try {
     const callValues = { beeId: action.payload };
     yield call(Meteor.callPromise, "bees.remove", callValues);

@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
 
@@ -10,7 +8,7 @@ import { INIT } from "../actionTypes/generic";
 import fetchBeesRequest from "../actionCreators/bees/fetchBeesRequest";
 
 // Worker
-export function* initializeAsyncStateWorker(action: Action) {
+export function* initializeAsyncStateWorker(action) {
   yield put(fetchBeesRequest());
 }
 

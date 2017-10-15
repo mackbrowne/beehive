@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 
@@ -17,11 +15,11 @@ const FieldRows = ({
   heading = "Fields",
   fields = {},
   stateSettingAction
-}: {
-  heading: string,
-  fields: Fields,
-  stateSettingAction: (event => void) | void
-}): StatelessComponent =>
+}
+
+
+
+ )                     =>
   <Container className="field-rows px-0" fluid>
     <Row noGutters>
       <Col>

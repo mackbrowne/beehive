@@ -1,10 +1,8 @@
-// @flow
-
 // Actoon Types
 import { CREATE_BEE_REQUEST } from "../../actionTypes/bees";
 
 // Action Creator
-export const createBeeRequest = (beePrototype: Object): Action => ({
+export const createBeeRequest = beePrototype => ({
   type: CREATE_BEE_REQUEST,
   payload: beePrototype
 });

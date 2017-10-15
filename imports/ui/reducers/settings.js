@@ -1,18 +1,13 @@
-// @flow
-
 // Action Types
 import { SET_SETTINGS_VALUE } from "../actionTypes/settings";
 
 // Default State
-export const DEFAULT_STATE: SettingsState = {
+export const DEFAULT_STATE = {
   hiveName: "Your Beehive"
 };
 
 // Reducer
-export const SettingsReducer = (
-  state: SettingsState = DEFAULT_STATE,
-  action: Action
-): SettingsState => {
+export const SettingsReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_SETTINGS_VALUE:
       return {

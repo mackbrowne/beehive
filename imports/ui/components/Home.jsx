@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 
@@ -17,10 +15,10 @@ import GameContainer from "../containers/GameContainer";
 const Home = ({
   toggleSideBar,
   sideBarOpen
-}: {
-  toggleSideBar: () => void,
-  sideBarOpen: boolean
-}): StatelessComponent =>
+}
+
+
+ )                     =>
   <Container fluid>
     <Row>
       <Col>

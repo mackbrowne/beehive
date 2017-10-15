@@ -1,5 +1,3 @@
-// @flow
-
 // Action Types
 import {
   FETCH_BEES_REQUEST,
@@ -17,16 +15,13 @@ import {
 } from "../actionTypes/bees";
 
 // Default State
-export const DEFAULT_STATE: BeesState = {
+export const DEFAULT_STATE = {
   bees: [],
   error: null
 };
 
 // Reducer
-export const BeesReducer = (
-  state: BeesState = DEFAULT_STATE,
-  action: Action
-): BeesState => {
+export const BeesReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case BEES_RECEIVED:
       return {

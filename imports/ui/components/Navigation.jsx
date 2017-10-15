@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 import { Link } from "react-router-dom";
@@ -16,9 +14,9 @@ import NavigationItem from "./NavigationItem";
  */
 const Navigation = ({
   navigationItems = []
-}: {
-  navigationItems: Array<StatefulLink>
-}): StatelessComponent =>
+}
+
+ )                     =>
   <nav className="navigation">
     <Container fluid>
       <Row>

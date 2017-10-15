@@ -1,5 +1,3 @@
-// @flow
-
 // Framework
 import React from "react";
 
@@ -15,11 +13,11 @@ const SideBar = ({
   numberOfBees,
   createBee,
   removeAllBees
-}: {
-  numberOfBees: number,
-  createBee: () => void,
-  removeAllBees: () => void
-}): StatelessComponent => {
+}
+
+
+
+ )                     => {
   const createBeeType = type => ({ type });
   const createWorker = () => createBee(createBeeType("Worker"));
   const createDrone = () => createBee(createBeeType("Drone"));

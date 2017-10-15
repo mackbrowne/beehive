@@ -1,12 +1,10 @@
-// @flow
-
 // Framework
 import React from 'react';
 
 // Components
 import { Container, Row, Col } from 'reactstrap';
 
-const NotFound = (): StatelessComponent => (
+const NotFound = ()                     => (
   <Container className="not-found">
     <Row>
       <Col>
