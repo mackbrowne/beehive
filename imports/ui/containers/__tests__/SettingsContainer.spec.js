@@ -1,8 +1,8 @@
-import { mapStateToProps, mapDispatchToProps } from "../SettingsContainer";
+import { mapStateToProps, mapDispatchToProps } from "../TimesheetsContainer";
 
-import { SET_SETTINGS_VALUE } from "../../actionTypes/settings";
+import { SET_SETTINGS_VALUE } from "../../actionTypes/timesheets";
 
-describe("SettingsContainer", () => {
+describe("TimesheetsContainer", () => {
   it("should test mapStateToProps", () => {
     const settingsFields = {};
     const inputState = {

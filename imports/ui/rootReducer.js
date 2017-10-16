@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
 
-import BeesReducer from "./reducers/bees";
+import TimesheetsReducer from "./reducers/timesheets";
 import ConfigReducer from "./reducers/config";
 import SettingsReducer from "./reducers/settings";
 import UIReducer from "./reducers/ui";
 
 const reducers = {
-  bees: BeesReducer,
+  timesheets: TimesheetsReducer,
   config: ConfigReducer,
   settings: SettingsReducer,
   ui: UIReducer

@@ -7,17 +7,13 @@ import rootReducer from "./rootReducer";
 
 // Sagas
 import initSaga from "./sagas/init";
-import createBeeSaga from "./sagas/bees/createBee";
-import fetchBeesSaga from "./sagas/bees/fetchBees";
-import removeAllBeesSaga from "./sagas/bees/removeAllBees";
-import removeBeeSaga from "./sagas/bees/removeBee";
+import createTimesheetSaga from "./sagas/timesheets/createTimesheet";
+import fetchTimesheetsSaga from "./sagas/timesheets/fetchTimesheets";
 
 export const combinedSagas = () => [
   initSaga,
-  createBeeSaga,
-  fetchBeesSaga,
-  removeAllBeesSaga,
-  removeBeeSaga
+  createTimesheetSaga,
+  fetchTimesheetsSaga
 ];
 
 export const registerSagas = (sagaMiddleware, sagas) =>

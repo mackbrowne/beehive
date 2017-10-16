@@ -8,12 +8,12 @@ import Navigation from "../components/Navigation";
 
 import HomeContainer from "../containers/HomeContainer";
 import ConfigContainer from "../containers/ConfigContainer";
-import SettingsContainer from "../containers/SettingsContainer";
+import TimesheetsContainer from "../containers/TimesheetsContainer";
 import NotFound from "../components/NotFound";
 
 const navigationItems = [
-  { label: "Game", path: "/" },
-  { label: "Settings", path: "/settings" },
+  { label: "Report", path: "/" },
+  { label: "Timesheets", path: "/timesheets" },
   { label: "Config", path: "/config" }
 ];
 
@@ -27,7 +27,7 @@ const AppLayout = ({ children }) =>
     <Row className="bg-faded">
       <Col>
         <header className="py-4 text-center">
-          <h1>Beehive Simulator</h1>
+          <h1>Wave Payroll Tool</h1>
         </header>
       </Col>
     </Row>
@@ -42,7 +42,7 @@ const AppLayout = ({ children }) =>
           <Switch>
             <Route exact path="/" component={HomeContainer} />
             <Route exact path="/config" component={ConfigContainer} />
-            <Route exact path="/settings" component={SettingsContainer} />
+            <Route exact path="/timesheets" component={TimesheetsContainer} />
             <Route path="*" component={NotFound} />
           </Switch>
         </main>
@@ -52,7 +52,7 @@ const AppLayout = ({ children }) =>
       <Col>
         <footer className="py-1 text-center">
           <p>
-            Created by: <a href="https://mackbrowne.com/">Mack Browne</a> and <a href="https://mackiedrew.com">Mackie Drew</a>
+            Created by: <a href="https://mackbrowne.com/">Mack Browne</a>
           </p>
         </footer>
       </Col>

@@ -5,11 +5,11 @@ import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
 import { INIT } from "../actionTypes/generic";
 
 // Action Creators
-import fetchBeesRequest from "../actionCreators/bees/fetchBeesRequest";
+import fetchTimesheetsRequest from "../actionCreators/timesheets/fetchTimesheetsRequest";
 
 // Worker
 export function* initializeAsyncStateWorker(action) {
-  yield put(fetchBeesRequest());
+  yield put(fetchTimesheetsRequest());
 }
 
 // Watcher

@@ -11,7 +11,7 @@ import FieldRows from "./FieldRows";
  * @param {Object} props All the properties passed to the React Component.
  * @returns {Element} Stateless functional React component.
  */
-const Settings = ({
+const Timesheets = ({
   settingsFields = {},
   settingsSettingAction
 }
@@ -23,7 +23,7 @@ const Settings = ({
       <Row noGutters>
         <Col>
           <FieldRows
-            heading="Settings"
+            heading="Timesheets"
             fields={settingsFields}
             stateSettingAction={settingsSettingAction}
           />
@@ -32,4 +32,4 @@ const Settings = ({
     </Container>
   </aside>;
 
-export default Settings;
+export default Timesheets;

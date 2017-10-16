@@ -7,7 +7,7 @@ import { bindActionCreators } from "redux";
 import setSettingsValue from "../actionCreators/settings/setSettingsValue";
 
 // Component to Contain
-import Settings from "../components/Settings";
+import Timesheets from "../components/Timesheets";
 
 // Connect the STATE to the props fed into the component.
 export const mapStateToProps = (state) => {
@@ -17,15 +17,15 @@ export const mapStateToProps = (state) => {
 // Connect ACTIONS to the props fed into the component.
 export const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
-    { settingsSettingAction: setSettingsValue },
+    { settingsSettingAction: setTimesheetsValue },
     dispatch
   );
 };
 
 // Create higher-order component which feeds in specified props.
-const SettingsContainer = connect(
+const TimesheetsContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Settings);
+)(Timesheets);
 
-export default SettingsContainer;
+export default TimesheetsContainer;

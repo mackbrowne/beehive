@@ -11,13 +11,13 @@ import Game from "../components/Game";
 
 // Connect the STATE to the props fed into the component.
 export const mapStateToProps = (state) => {
-  return { bees: state.bees.bees };
+  return { };
 };
 
 // Connect ACTIONS to the props fed into the component.
 export const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    removeBee: removeBeeRequest
+
   }, dispatch);
 };
 

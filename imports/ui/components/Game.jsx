@@ -12,7 +12,7 @@ import BeeCard from "./BeeCard";
  * @returns {Element} Stateless functional React component.
  */
 const Game = ({
-  bees = [],
+  //bees = [],
   removeBee
 }
 
@@ -27,13 +27,14 @@ const Game = ({
     <Row noGutters>
       <Col>
         <p>
-          <strong>Total Bees:</strong> {bees.length}
+          <strong>Total Bees:</strong>
+          {/* {bees.length} */}
         </p>
       </Col>
     </Row>
     <Row>
       <CardColumns>
-        {bees.map(bee => <BeeCard key={bee._id} bee={bee} removeBee={removeBee} />)}
+        {/*{bees.map(bee => <BeeCard key={bee._id} bee={bee} removeBee={removeBee} />)}*/}
       </CardColumns>
     </Row>
   </Container>;
