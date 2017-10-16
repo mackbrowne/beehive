@@ -2,20 +2,13 @@
   "parser": "babel-eslint",
   "plugins": [
     "prettier",
-    "flowtype",
     "react"
   ],
   "extends": [
     "prettier",
-    "prettier/flowtype",
     "prettier/react"
   ],
   "rules": {
     "prettier/prettier": "error"
-  },
-  "settings": {
-    "flowtype": {
-      "onlyFilesWithFlowAnnotation": false
-    }
   }
 }

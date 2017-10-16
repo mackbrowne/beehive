@@ -12,6 +12,6 @@ const reducers = {
   ui: UIReducer
 };
 
-const rootReducer: Reducer<any, any> = combineReducers(reducers);
+const rootReducer = combineReducers(reducers);
 
 export default rootReducer;
