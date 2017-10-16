@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 
 // Libraries
 import "bootstrap/dist/css/bootstrap.css";
+import "react-bootstrap-table/dist/react-bootstrap-table.min.css";
 
 // Client Imports
 import AppLayout from "../../ui/layouts/AppLayout";

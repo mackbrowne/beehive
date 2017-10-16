@@ -12,7 +12,7 @@ import timesheetsRequestFailed from "../../actionCreators/timesheets/timesheetsR
 // Worker
 export function* fetchTimesheetsWorker(action) {
   try {
-    const timesheets = yield call(Meteor.callPromise, "timesheets.fetchAllForUser");
+    const timesheets = yield call(Meteor.callPromise, "timesheets.fetchAll");
     yield put(timesheetsReceived(timesheets));
   } catch ({ message }) {
     yield put(timesheetsRequestFailed(message));

@@ -2,6 +2,8 @@
 import { Meteor } from "meteor/meteor";
 import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
 
+import { readAsText } from "promise-file-reader";
+
 // Action Types
 import { CREATE_TIMESHEET_REQUEST } from "../../actionTypes/timesheets";
 
@@ -14,8 +16,14 @@ import fetchTimesheetsRequest from "../../actionCreators/timesheets/fetchTimeshe
 export function* createTimesheetWorker(action) {
   try {
     const callValues = { timesheet: action.payload };
-    yield call(Meteor.callPromise, "timesheets.insert", callValues);
-    yield put(createTimesheetSuccessful());
+    const timesheetFile = yield call(readAsText, action.payload);
+    const timesheet = yield call(
+      Meteor.callPromise,
+      "timesheets.insert",
+      timesheetFile
+    );
+    window.URL.revokeObjectURL(action.payload.preview);
+    yield put(createTimesheetSuccessful(timesheet));
     yield put(fetchTimesheetsRequest());
   } catch ({ message }) {
     yield put(createTimesheetFailed(message));

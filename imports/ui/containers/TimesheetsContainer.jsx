@@ -4,20 +4,31 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 // Actions to Bind
-import setSettingsValue from "../actionCreators/settings/setSettingsValue";
+import createTimesheetRequest from "../actionCreators/timesheets/createTimesheetRequest";
+import createTimesheetFailed from "../actionCreators/timesheets/createTimesheetFailed";
 
 // Component to Contain
 import Timesheets from "../components/Timesheets";
 
 // Connect the STATE to the props fed into the component.
 export const mapStateToProps = (state) => {
-  return { settingsFields: state.settings };
+  return {
+    timesheets: state.timesheets.timesheets,
+    fileTypes: '.csv'
+   };
 };
 
 // Connect ACTIONS to the props fed into the component.
 export const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
-    { settingsSettingAction: setTimesheetsValue },
+    {
+      onDrop: (accepted, rejected) => {
+        if(accepted.length < 1){
+          return createTimesheetFailed("Invalid File");
+        }
+        return createTimesheetRequest(accepted[0]);
+      }
+    },
     dispatch
   );
 };

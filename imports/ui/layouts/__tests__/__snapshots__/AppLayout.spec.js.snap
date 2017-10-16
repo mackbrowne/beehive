@@ -14,7 +14,7 @@ exports[`<AppLayout /> AppLayout SnapShot renders config correctly with default 
         className="py-4 text-center"
       >
         <h1>
-          Beehive Simulator
+          Wave Payroll Tool
         </h1>
       </header>
     </div>
@@ -42,7 +42,7 @@ exports[`<AppLayout /> AppLayout SnapShot renders config correctly with default 
                 href="/"
                 onClick={[Function]}
               >
-                Game
+                Report
               </a>
             </div>
             <div
@@ -50,10 +50,10 @@ exports[`<AppLayout /> AppLayout SnapShot renders config correctly with default 
             >
               <a
                 className="navigation-item"
-                href="/settings"
+                href="/timesheets"
                 onClick={[Function]}
               >
-                Settings
+                Timesheets
               </a>
             </div>
             <div
@@ -117,12 +117,6 @@ exports[`<AppLayout /> AppLayout SnapShot renders config correctly with default 
             href="https://mackbrowne.com/"
           >
             Mack Browne
-          </a>
-           and 
-          <a
-            href="https://mackiedrew.com"
-          >
-            Mackie Drew
           </a>
         </p>
       </footer>

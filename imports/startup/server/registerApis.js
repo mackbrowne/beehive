@@ -1,2 +1,2 @@
-import "../../api/bees/collection";
-import "../../api/bees/methods";
+import "../../api/timesheets/collection";
+import "../../api/timesheets/methods";

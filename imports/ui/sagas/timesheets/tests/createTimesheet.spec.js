@@ -4,10 +4,13 @@ import { testSaga, expectSaga } from "redux-saga-test-plan";
 import * as matchers from "redux-saga-test-plan/matchers";
 import { throwError } from "redux-saga-test-plan/providers";
 
-import { createTimesheetWorker, createTimesheetWatcher } from "../createTimesheet";
+import {
+  createTimesheetWorker,
+  createTimesheetWatcher
+} from "../createTimesheet";
 
 // Action Types
-import { CREATE_BEE_REQUEST } from "../../../actionTypes/timesheets";
+import { CREATE_TIMESHEET_REQUEST } from "../../../actionTypes/timesheets";
 
 // Action Creators
 import createTimesheetFailed from "../../../actionCreators/timesheets/createTimesheetFailed";
@@ -20,7 +23,9 @@ describe("FetchTimesheets Worker", () => {
   it("works normally", () => {
     testSaga(createTimesheetWorker, action)
       .next()
-      .call(Meteor.callPromise, "timesheets.insert", { timesheet: action.payload })
+      .call(Meteor.callPromise, "timesheets.insert", {
+        timesheet: action.payload
+      })
       .next()
       .put(createTimesheetSuccessful())
       .next()
@@ -52,7 +57,7 @@ describe("CreateTimesheet Watcher", () => {
   it("works normally", () => {
     testSaga(createTimesheetWatcher)
       .next()
-      .takeLatestEffect(CREATE_BEE_REQUEST, createTimesheetWorker)
+      .takeLatestEffect(CREATE_TIMESHEET_REQUEST, createTimesheetWorker)
       .finish()
       .isDone();
   });

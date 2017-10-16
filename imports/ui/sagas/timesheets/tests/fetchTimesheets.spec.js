@@ -4,7 +4,10 @@ import { testSaga, expectSaga } from "redux-saga-test-plan";
 import * as matchers from "redux-saga-test-plan/matchers";
 import { throwError } from "redux-saga-test-plan/providers";
 
-import { fetchTimesheetsWorker, fetchTimesheetsWatcher } from "../fetchTimesheets";
+import {
+  fetchTimesheetsWorker,
+  fetchTimesheetsWatcher
+} from "../fetchTimesheets";
 
 // Action Types
 import { FETCH_TIMESHEETS_REQUEST } from "../../../actionTypes/timesheets";
