@@ -14,7 +14,7 @@ export function* fetchBeesWorker(action) {
   try {
     const bees = yield call(Meteor.callPromise, "bees.fetchAllForUser");
     yield put(beesReceived(bees));
-  } catch ({ message = "No error message specified." }) {
+  } catch ({ message }) {
     yield put(beesRequestFailed(message));
   }
 }

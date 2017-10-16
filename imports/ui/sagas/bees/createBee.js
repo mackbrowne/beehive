@@ -17,7 +17,7 @@ export function* createBeeWorker(action) {
     yield call(Meteor.callPromise, "bees.insert", callValues);
     yield put(createBeeSuccessful());
     yield put(fetchBeesRequest());
-  } catch ({ message = "No error message specified." }) {
+  } catch ({ message }) {
     yield put(createBeeFailed(message));
   }
 }

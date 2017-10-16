@@ -17,7 +17,7 @@ export function* removeBeeWorker(action) {
     yield call(Meteor.callPromise, "bees.remove", callValues);
     yield put(removeBeeSuccessful());
     yield put(fetchBeesRequest());
-  } catch ({ message = "No error message specified." }) {
+  } catch ({ message }) {
     yield put(removeBeeFailed(message));
   }
 }
