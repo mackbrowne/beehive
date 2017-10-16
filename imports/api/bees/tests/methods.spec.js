@@ -5,7 +5,13 @@ import { Mongo } from "meteor/mongo";
 import { ValidatedMethod } from "meteor/mdg:validated-method";
 //import { _ } from 'meteor/underscore';
 //import { Bees } from '../collection';
-import { fetchAllForUser, insert, updateName, remove } from "../methods";
+import {
+  fetchAllForUser,
+  insert,
+  updateName,
+  remove,
+  removeAllForUser
+} from "../methods";
 
 describe("bee methods", function() {
   let collection;
@@ -34,7 +40,21 @@ describe("bee methods", function() {
       expect(collection.insert).toHaveBeenCalled();
     });
 
-    //TODO throws error
+    it("runs the error case", () => {
+      const error = Meteor.Error("Insert Error");
+      collection.insert = jest.fn(bee => {
+        throw error;
+      });
+      expect(() => {
+        insert.run(bee);
+      }).toThrow(
+        Meteor.Error(
+          "api.bees.insert.unspecifiedError",
+          "Could not insert a new bee.",
+          error
+        )
+      );
+    });
   });
 
   describe("bees.updateName", () => {
@@ -65,6 +85,15 @@ describe("bee methods", function() {
       const result = remove.run({ beeId });
       expect(collection.findOne).toHaveBeenCalledWith(beeId);
       expect(collection.remove).toHaveBeenCalledWith(beeId);
+    });
+
+    //TODO throws error
+  });
+
+  describe("bees.removeAllForUser", () => {
+    it("runs normally", () => {
+      const result = removeAllForUser.run();
+      expect(collection.remove).toHaveBeenCalledWith({});
     });
 
     //TODO throws error
