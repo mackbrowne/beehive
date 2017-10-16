@@ -11,7 +11,7 @@ import ConfigContainer from "../containers/ConfigContainer";
 import SettingsContainer from "../containers/SettingsContainer";
 import NotFound from "../components/NotFound";
 
-const navigationItems                      = [
+const navigationItems = [
   { label: "Game", path: "/" },
   { label: "Settings", path: "/settings" },
   { label: "Config", path: "/config" }
@@ -22,11 +22,7 @@ const navigationItems                      = [
  *
  * @returns {Element} Stateless functional React component.
  */
-const AppLayout = ({
-  children
-}
-
- )                     =>
+const AppLayout = ({ children }) =>
   <Container className="app px-0" fluid>
     <Row className="bg-faded">
       <Col>
