@@ -38,10 +38,16 @@ export const configureStore = initialState => {
   // Create a function that can create a store with the new middleware
   const createStoreWithMiddleWare = sagaStoreEnhancer(createStore);
   // Determine whether debug mode should be attached
-  const reduxDevTools = window.__REDUX_DEVTOOLS_EXTENSION__;
-  const debug = typeof reduxDevTools === "function" ? reduxDevTools() : a => a;
-  // Actually create the store with the new middleware
-  const store = createStoreWithMiddleWare(rootReducer, initialState, debug);
+  let store;
+  if (Meteor.isDevelopment) {
+    const reduxDevTools = window.__REDUX_DEVTOOLS_EXTENSION__;
+    const debug =
+      typeof reduxDevTools === "function" ? reduxDevTools() : a => a;
+    // Actually create the store with the new middleware
+    store = createStoreWithMiddleWare(rootReducer, initialState, debug);
+  } else {
+    store = createStoreWithMiddleWare(rootReducer, initialState);
+  }
   // Register all sagas with middleware
   registerSagas(sagaMiddleware, combinedSagas());
   return store;
