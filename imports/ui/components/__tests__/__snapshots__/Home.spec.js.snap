@@ -1,0 +1,1225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> Home Props should render correctly with an error 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home
+    payments={Array []}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <h3>
+          Current Payroll Report
+        </h3>,
+        <BootstrapTable
+          autoCollapse={
+            Object {
+              "filter": false,
+              "search": false,
+              "sort": false,
+            }
+          }
+          bodyContainerClass={null}
+          bodyStyle={undefined}
+          bordered={true}
+          cellEdit={
+            Object {
+              "afterSaveCell": undefined,
+              "beforeSaveCell": undefined,
+              "blurToEscape": false,
+              "blurToSave": false,
+              "mode": "none",
+              "nonEditableRows": undefined,
+            }
+          }
+          columnFilter={false}
+          condensed={false}
+          containerClass={null}
+          containerStyle={undefined}
+          csvFileName="spreadsheet.csv"
+          data={Array []}
+          deleteRow={false}
+          expandColumnOptions={
+            Object {
+              "expandColumnBeforeSelectColumn": true,
+              "expandColumnComponent": undefined,
+              "expandColumnVisible": false,
+            }
+          }
+          expandComponent={undefined}
+          expandableRow={undefined}
+          exportCSV={false}
+          fetchInfo={
+            Object {
+              "dataTotalSize": 0,
+            }
+          }
+          footer={false}
+          headerContainerClass={null}
+          headerStyle={undefined}
+          height="100%"
+          hover={true}
+          ignoreSinglePage={false}
+          insertRow={false}
+          keyBoardNav={false}
+          maxHeight={undefined}
+          multiColumnSearch={false}
+          multiColumnSort={1}
+          options={
+            Object {
+              "noDataText": "No Payroll Data.  Upload a Timesheet.",
+            }
+          }
+          pagination={false}
+          printable={false}
+          replace={false}
+          scrollTop={undefined}
+          search={false}
+          searchPlaceholder={undefined}
+          selectRow={
+            Object {
+              "bgColor": "",
+              "clickToExpand": false,
+              "clickToSelect": false,
+              "clickToSelectAndEditCell": false,
+              "customComponent": undefined,
+              "hideSelectColumn": false,
+              "mode": "none",
+              "onSelect": undefined,
+              "onSelectAll": undefined,
+              "onlyUnselectVisible": false,
+              "selected": Array [],
+              "showOnlySelected": false,
+              "unselectable": Array [],
+            }
+          }
+          strictSearch={undefined}
+          striped={true}
+          tableBodyClass={null}
+          tableContainerClass={null}
+          tableFooterClass={null}
+          tableHeaderClass={null}
+          tableStyle={undefined}
+          trClassName=""
+          trStyle={undefined}
+          version="3"
+          withoutTabIndex={false}
+        >
+          <TableHeaderColumn
+            className=""
+            columnClassName=""
+            columnTitle={false}
+            csvFieldType="string"
+            csvFormat={undefined}
+            csvHeader={undefined}
+            dataAlign="left"
+            dataField="period"
+            dataFormat={[Function]}
+            dataSort={true}
+            defaultASC={false}
+            editColumnClassName=""
+            editTdAttr={undefined}
+            editable={true}
+            expandable={true}
+            filter={undefined}
+            filterFormatted={false}
+            filterValue={undefined}
+            formatExtraData={undefined}
+            headerAlign={undefined}
+            headerTitle={true}
+            hidden={false}
+            hiddenOnInsert={false}
+            invalidEditColumnClassName=""
+            isKey={true}
+            keyValidator={false}
+            onSort={undefined}
+            searchable={true}
+            sort={undefined}
+            sortFunc={[Function]}
+            sortFuncExtraData={undefined}
+            sortIndicator={true}
+            tdAttr={undefined}
+            tdStyle={undefined}
+            thStyle={undefined}
+            width={null}
+          >
+            Pay Period
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className=""
+            columnClassName=""
+            columnTitle={false}
+            csvFieldType="string"
+            csvFormat={undefined}
+            csvHeader={undefined}
+            dataAlign="left"
+            dataField="employee"
+            dataFormat={undefined}
+            dataSort={true}
+            defaultASC={false}
+            editColumnClassName=""
+            editTdAttr={undefined}
+            editable={true}
+            expandable={true}
+            filter={undefined}
+            filterFormatted={false}
+            filterValue={undefined}
+            formatExtraData={undefined}
+            headerAlign={undefined}
+            headerTitle={true}
+            hidden={false}
+            hiddenOnInsert={false}
+            invalidEditColumnClassName=""
+            isKey={false}
+            keyValidator={false}
+            onSort={undefined}
+            searchable={true}
+            sort={undefined}
+            sortFunc={undefined}
+            sortFuncExtraData={undefined}
+            sortIndicator={true}
+            tdAttr={undefined}
+            tdStyle={undefined}
+            thStyle={undefined}
+            width={null}
+          >
+            Employee Id
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            className=""
+            columnClassName=""
+            columnTitle={false}
+            csvFieldType="string"
+            csvFormat={undefined}
+            csvHeader={undefined}
+            dataAlign="left"
+            dataField="amount"
+            dataFormat={undefined}
+            dataSort={true}
+            defaultASC={false}
+            editColumnClassName=""
+            editTdAttr={undefined}
+            editable={true}
+            expandable={true}
+            filter={undefined}
+            filterFormatted={false}
+            filterValue={undefined}
+            formatExtraData={undefined}
+            headerAlign={undefined}
+            headerTitle={true}
+            hidden={false}
+            hiddenOnInsert={false}
+            invalidEditColumnClassName=""
+            isKey={false}
+            keyValidator={false}
+            onSort={undefined}
+            searchable={true}
+            sort={undefined}
+            sortFunc={undefined}
+            sortFuncExtraData={undefined}
+            sortIndicator={true}
+            tdAttr={undefined}
+            tdStyle={undefined}
+            thStyle={undefined}
+            width={null}
+          >
+            Amount Paid
+          </TableHeaderColumn>
+        </BootstrapTable>,
+      ],
+      "className": "page timesheets",
+      "fluid": true,
+      "tag": "div",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Current Payroll Report",
+        },
+        "ref": null,
+        "rendered": "Current Payroll Report",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "autoCollapse": Object {
+            "filter": false,
+            "search": false,
+            "sort": false,
+          },
+          "bodyContainerClass": null,
+          "bodyStyle": undefined,
+          "bordered": true,
+          "cellEdit": Object {
+            "afterSaveCell": undefined,
+            "beforeSaveCell": undefined,
+            "blurToEscape": false,
+            "blurToSave": false,
+            "mode": "none",
+            "nonEditableRows": undefined,
+          },
+          "children": Array [
+            <TableHeaderColumn
+              className=""
+              columnClassName=""
+              columnTitle={false}
+              csvFieldType="string"
+              csvFormat={undefined}
+              csvHeader={undefined}
+              dataAlign="left"
+              dataField="period"
+              dataFormat={[Function]}
+              dataSort={true}
+              defaultASC={false}
+              editColumnClassName=""
+              editTdAttr={undefined}
+              editable={true}
+              expandable={true}
+              filter={undefined}
+              filterFormatted={false}
+              filterValue={undefined}
+              formatExtraData={undefined}
+              headerAlign={undefined}
+              headerTitle={true}
+              hidden={false}
+              hiddenOnInsert={false}
+              invalidEditColumnClassName=""
+              isKey={true}
+              keyValidator={false}
+              onSort={undefined}
+              searchable={true}
+              sort={undefined}
+              sortFunc={[Function]}
+              sortFuncExtraData={undefined}
+              sortIndicator={true}
+              tdAttr={undefined}
+              tdStyle={undefined}
+              thStyle={undefined}
+              width={null}
+            >
+              Pay Period
+            </TableHeaderColumn>,
+            <TableHeaderColumn
+              className=""
+              columnClassName=""
+              columnTitle={false}
+              csvFieldType="string"
+              csvFormat={undefined}
+              csvHeader={undefined}
+              dataAlign="left"
+              dataField="employee"
+              dataFormat={undefined}
+              dataSort={true}
+              defaultASC={false}
+              editColumnClassName=""
+              editTdAttr={undefined}
+              editable={true}
+              expandable={true}
+              filter={undefined}
+              filterFormatted={false}
+              filterValue={undefined}
+              formatExtraData={undefined}
+              headerAlign={undefined}
+              headerTitle={true}
+              hidden={false}
+              hiddenOnInsert={false}
+              invalidEditColumnClassName=""
+              isKey={false}
+              keyValidator={false}
+              onSort={undefined}
+              searchable={true}
+              sort={undefined}
+              sortFunc={undefined}
+              sortFuncExtraData={undefined}
+              sortIndicator={true}
+              tdAttr={undefined}
+              tdStyle={undefined}
+              thStyle={undefined}
+              width={null}
+            >
+              Employee Id
+            </TableHeaderColumn>,
+            <TableHeaderColumn
+              className=""
+              columnClassName=""
+              columnTitle={false}
+              csvFieldType="string"
+              csvFormat={undefined}
+              csvHeader={undefined}
+              dataAlign="left"
+              dataField="amount"
+              dataFormat={undefined}
+              dataSort={true}
+              defaultASC={false}
+              editColumnClassName=""
+              editTdAttr={undefined}
+              editable={true}
+              expandable={true}
+              filter={undefined}
+              filterFormatted={false}
+              filterValue={undefined}
+              formatExtraData={undefined}
+              headerAlign={undefined}
+              headerTitle={true}
+              hidden={false}
+              hiddenOnInsert={false}
+              invalidEditColumnClassName=""
+              isKey={false}
+              keyValidator={false}
+              onSort={undefined}
+              searchable={true}
+              sort={undefined}
+              sortFunc={undefined}
+              sortFuncExtraData={undefined}
+              sortIndicator={true}
+              tdAttr={undefined}
+              tdStyle={undefined}
+              thStyle={undefined}
+              width={null}
+            >
+              Amount Paid
+            </TableHeaderColumn>,
+          ],
+          "columnFilter": false,
+          "condensed": false,
+          "containerClass": null,
+          "containerStyle": undefined,
+          "csvFileName": "spreadsheet.csv",
+          "data": Array [],
+          "deleteRow": false,
+          "expandColumnOptions": Object {
+            "expandColumnBeforeSelectColumn": true,
+            "expandColumnComponent": undefined,
+            "expandColumnVisible": false,
+          },
+          "expandComponent": undefined,
+          "expandableRow": undefined,
+          "exportCSV": false,
+          "fetchInfo": Object {
+            "dataTotalSize": 0,
+          },
+          "footer": false,
+          "headerContainerClass": null,
+          "headerStyle": undefined,
+          "height": "100%",
+          "hover": true,
+          "ignoreSinglePage": false,
+          "insertRow": false,
+          "keyBoardNav": false,
+          "maxHeight": undefined,
+          "multiColumnSearch": false,
+          "multiColumnSort": 1,
+          "options": Object {
+            "noDataText": "No Payroll Data.  Upload a Timesheet.",
+          },
+          "pagination": false,
+          "printable": false,
+          "replace": false,
+          "scrollTop": undefined,
+          "search": false,
+          "searchPlaceholder": undefined,
+          "selectRow": Object {
+            "bgColor": "",
+            "clickToExpand": false,
+            "clickToSelect": false,
+            "clickToSelectAndEditCell": false,
+            "customComponent": undefined,
+            "hideSelectColumn": false,
+            "mode": "none",
+            "onSelect": undefined,
+            "onSelectAll": undefined,
+            "onlyUnselectVisible": false,
+            "selected": Array [],
+            "showOnlySelected": false,
+            "unselectable": Array [],
+          },
+          "strictSearch": undefined,
+          "striped": true,
+          "tableBodyClass": null,
+          "tableContainerClass": null,
+          "tableFooterClass": null,
+          "tableHeaderClass": null,
+          "tableStyle": undefined,
+          "trClassName": "",
+          "trStyle": undefined,
+          "version": "3",
+          "withoutTabIndex": false,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Pay Period",
+              "className": "",
+              "columnClassName": "",
+              "columnTitle": false,
+              "csvFieldType": "string",
+              "csvFormat": undefined,
+              "csvHeader": undefined,
+              "dataAlign": "left",
+              "dataField": "period",
+              "dataFormat": [Function],
+              "dataSort": true,
+              "defaultASC": false,
+              "editColumnClassName": "",
+              "editTdAttr": undefined,
+              "editable": true,
+              "expandable": true,
+              "filter": undefined,
+              "filterFormatted": false,
+              "filterValue": undefined,
+              "formatExtraData": undefined,
+              "headerAlign": undefined,
+              "headerTitle": true,
+              "hidden": false,
+              "hiddenOnInsert": false,
+              "invalidEditColumnClassName": "",
+              "isKey": true,
+              "keyValidator": false,
+              "onSort": undefined,
+              "searchable": true,
+              "sort": undefined,
+              "sortFunc": [Function],
+              "sortFuncExtraData": undefined,
+              "sortIndicator": true,
+              "tdAttr": undefined,
+              "tdStyle": undefined,
+              "thStyle": undefined,
+              "width": null,
+            },
+            "ref": null,
+            "rendered": "Pay Period",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Employee Id",
+              "className": "",
+              "columnClassName": "",
+              "columnTitle": false,
+              "csvFieldType": "string",
+              "csvFormat": undefined,
+              "csvHeader": undefined,
+              "dataAlign": "left",
+              "dataField": "employee",
+              "dataFormat": undefined,
+              "dataSort": true,
+              "defaultASC": false,
+              "editColumnClassName": "",
+              "editTdAttr": undefined,
+              "editable": true,
+              "expandable": true,
+              "filter": undefined,
+              "filterFormatted": false,
+              "filterValue": undefined,
+              "formatExtraData": undefined,
+              "headerAlign": undefined,
+              "headerTitle": true,
+              "hidden": false,
+              "hiddenOnInsert": false,
+              "invalidEditColumnClassName": "",
+              "isKey": false,
+              "keyValidator": false,
+              "onSort": undefined,
+              "searchable": true,
+              "sort": undefined,
+              "sortFunc": undefined,
+              "sortFuncExtraData": undefined,
+              "sortIndicator": true,
+              "tdAttr": undefined,
+              "tdStyle": undefined,
+              "thStyle": undefined,
+              "width": null,
+            },
+            "ref": null,
+            "rendered": "Employee Id",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Amount Paid",
+              "className": "",
+              "columnClassName": "",
+              "columnTitle": false,
+              "csvFieldType": "string",
+              "csvFormat": undefined,
+              "csvHeader": undefined,
+              "dataAlign": "left",
+              "dataField": "amount",
+              "dataFormat": undefined,
+              "dataSort": true,
+              "defaultASC": false,
+              "editColumnClassName": "",
+              "editTdAttr": undefined,
+              "editable": true,
+              "expandable": true,
+              "filter": undefined,
+              "filterFormatted": false,
+              "filterValue": undefined,
+              "formatExtraData": undefined,
+              "headerAlign": undefined,
+              "headerTitle": true,
+              "hidden": false,
+              "hiddenOnInsert": false,
+              "invalidEditColumnClassName": "",
+              "isKey": false,
+              "keyValidator": false,
+              "onSort": undefined,
+              "searchable": true,
+              "sort": undefined,
+              "sortFunc": undefined,
+              "sortFuncExtraData": undefined,
+              "sortIndicator": true,
+              "tdAttr": undefined,
+              "tdStyle": undefined,
+              "thStyle": undefined,
+              "width": null,
+            },
+            "ref": null,
+            "rendered": "Amount Paid",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Current Payroll Report
+          </h3>,
+          <BootstrapTable
+            autoCollapse={
+              Object {
+                "filter": false,
+                "search": false,
+                "sort": false,
+              }
+            }
+            bodyContainerClass={null}
+            bodyStyle={undefined}
+            bordered={true}
+            cellEdit={
+              Object {
+                "afterSaveCell": undefined,
+                "beforeSaveCell": undefined,
+                "blurToEscape": false,
+                "blurToSave": false,
+                "mode": "none",
+                "nonEditableRows": undefined,
+              }
+            }
+            columnFilter={false}
+            condensed={false}
+            containerClass={null}
+            containerStyle={undefined}
+            csvFileName="spreadsheet.csv"
+            data={Array []}
+            deleteRow={false}
+            expandColumnOptions={
+              Object {
+                "expandColumnBeforeSelectColumn": true,
+                "expandColumnComponent": undefined,
+                "expandColumnVisible": false,
+              }
+            }
+            expandComponent={undefined}
+            expandableRow={undefined}
+            exportCSV={false}
+            fetchInfo={
+              Object {
+                "dataTotalSize": 0,
+              }
+            }
+            footer={false}
+            headerContainerClass={null}
+            headerStyle={undefined}
+            height="100%"
+            hover={true}
+            ignoreSinglePage={false}
+            insertRow={false}
+            keyBoardNav={false}
+            maxHeight={undefined}
+            multiColumnSearch={false}
+            multiColumnSort={1}
+            options={
+              Object {
+                "noDataText": "No Payroll Data.  Upload a Timesheet.",
+              }
+            }
+            pagination={false}
+            printable={false}
+            replace={false}
+            scrollTop={undefined}
+            search={false}
+            searchPlaceholder={undefined}
+            selectRow={
+              Object {
+                "bgColor": "",
+                "clickToExpand": false,
+                "clickToSelect": false,
+                "clickToSelectAndEditCell": false,
+                "customComponent": undefined,
+                "hideSelectColumn": false,
+                "mode": "none",
+                "onSelect": undefined,
+                "onSelectAll": undefined,
+                "onlyUnselectVisible": false,
+                "selected": Array [],
+                "showOnlySelected": false,
+                "unselectable": Array [],
+              }
+            }
+            strictSearch={undefined}
+            striped={true}
+            tableBodyClass={null}
+            tableContainerClass={null}
+            tableFooterClass={null}
+            tableHeaderClass={null}
+            tableStyle={undefined}
+            trClassName=""
+            trStyle={undefined}
+            version="3"
+            withoutTabIndex={false}
+          >
+            <TableHeaderColumn
+              className=""
+              columnClassName=""
+              columnTitle={false}
+              csvFieldType="string"
+              csvFormat={undefined}
+              csvHeader={undefined}
+              dataAlign="left"
+              dataField="period"
+              dataFormat={[Function]}
+              dataSort={true}
+              defaultASC={false}
+              editColumnClassName=""
+              editTdAttr={undefined}
+              editable={true}
+              expandable={true}
+              filter={undefined}
+              filterFormatted={false}
+              filterValue={undefined}
+              formatExtraData={undefined}
+              headerAlign={undefined}
+              headerTitle={true}
+              hidden={false}
+              hiddenOnInsert={false}
+              invalidEditColumnClassName=""
+              isKey={true}
+              keyValidator={false}
+              onSort={undefined}
+              searchable={true}
+              sort={undefined}
+              sortFunc={[Function]}
+              sortFuncExtraData={undefined}
+              sortIndicator={true}
+              tdAttr={undefined}
+              tdStyle={undefined}
+              thStyle={undefined}
+              width={null}
+            >
+              Pay Period
+            </TableHeaderColumn>
+            <TableHeaderColumn
+              className=""
+              columnClassName=""
+              columnTitle={false}
+              csvFieldType="string"
+              csvFormat={undefined}
+              csvHeader={undefined}
+              dataAlign="left"
+              dataField="employee"
+              dataFormat={undefined}
+              dataSort={true}
+              defaultASC={false}
+              editColumnClassName=""
+              editTdAttr={undefined}
+              editable={true}
+              expandable={true}
+              filter={undefined}
+              filterFormatted={false}
+              filterValue={undefined}
+              formatExtraData={undefined}
+              headerAlign={undefined}
+              headerTitle={true}
+              hidden={false}
+              hiddenOnInsert={false}
+              invalidEditColumnClassName=""
+              isKey={false}
+              keyValidator={false}
+              onSort={undefined}
+              searchable={true}
+              sort={undefined}
+              sortFunc={undefined}
+              sortFuncExtraData={undefined}
+              sortIndicator={true}
+              tdAttr={undefined}
+              tdStyle={undefined}
+              thStyle={undefined}
+              width={null}
+            >
+              Employee Id
+            </TableHeaderColumn>
+            <TableHeaderColumn
+              className=""
+              columnClassName=""
+              columnTitle={false}
+              csvFieldType="string"
+              csvFormat={undefined}
+              csvHeader={undefined}
+              dataAlign="left"
+              dataField="amount"
+              dataFormat={undefined}
+              dataSort={true}
+              defaultASC={false}
+              editColumnClassName=""
+              editTdAttr={undefined}
+              editable={true}
+              expandable={true}
+              filter={undefined}
+              filterFormatted={false}
+              filterValue={undefined}
+              formatExtraData={undefined}
+              headerAlign={undefined}
+              headerTitle={true}
+              hidden={false}
+              hiddenOnInsert={false}
+              invalidEditColumnClassName=""
+              isKey={false}
+              keyValidator={false}
+              onSort={undefined}
+              searchable={true}
+              sort={undefined}
+              sortFunc={undefined}
+              sortFuncExtraData={undefined}
+              sortIndicator={true}
+              tdAttr={undefined}
+              tdStyle={undefined}
+              thStyle={undefined}
+              width={null}
+            >
+              Amount Paid
+            </TableHeaderColumn>
+          </BootstrapTable>,
+        ],
+        "className": "page timesheets",
+        "fluid": true,
+        "tag": "div",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Current Payroll Report",
+          },
+          "ref": null,
+          "rendered": "Current Payroll Report",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "autoCollapse": Object {
+              "filter": false,
+              "search": false,
+              "sort": false,
+            },
+            "bodyContainerClass": null,
+            "bodyStyle": undefined,
+            "bordered": true,
+            "cellEdit": Object {
+              "afterSaveCell": undefined,
+              "beforeSaveCell": undefined,
+              "blurToEscape": false,
+              "blurToSave": false,
+              "mode": "none",
+              "nonEditableRows": undefined,
+            },
+            "children": Array [
+              <TableHeaderColumn
+                className=""
+                columnClassName=""
+                columnTitle={false}
+                csvFieldType="string"
+                csvFormat={undefined}
+                csvHeader={undefined}
+                dataAlign="left"
+                dataField="period"
+                dataFormat={[Function]}
+                dataSort={true}
+                defaultASC={false}
+                editColumnClassName=""
+                editTdAttr={undefined}
+                editable={true}
+                expandable={true}
+                filter={undefined}
+                filterFormatted={false}
+                filterValue={undefined}
+                formatExtraData={undefined}
+                headerAlign={undefined}
+                headerTitle={true}
+                hidden={false}
+                hiddenOnInsert={false}
+                invalidEditColumnClassName=""
+                isKey={true}
+                keyValidator={false}
+                onSort={undefined}
+                searchable={true}
+                sort={undefined}
+                sortFunc={[Function]}
+                sortFuncExtraData={undefined}
+                sortIndicator={true}
+                tdAttr={undefined}
+                tdStyle={undefined}
+                thStyle={undefined}
+                width={null}
+              >
+                Pay Period
+              </TableHeaderColumn>,
+              <TableHeaderColumn
+                className=""
+                columnClassName=""
+                columnTitle={false}
+                csvFieldType="string"
+                csvFormat={undefined}
+                csvHeader={undefined}
+                dataAlign="left"
+                dataField="employee"
+                dataFormat={undefined}
+                dataSort={true}
+                defaultASC={false}
+                editColumnClassName=""
+                editTdAttr={undefined}
+                editable={true}
+                expandable={true}
+                filter={undefined}
+                filterFormatted={false}
+                filterValue={undefined}
+                formatExtraData={undefined}
+                headerAlign={undefined}
+                headerTitle={true}
+                hidden={false}
+                hiddenOnInsert={false}
+                invalidEditColumnClassName=""
+                isKey={false}
+                keyValidator={false}
+                onSort={undefined}
+                searchable={true}
+                sort={undefined}
+                sortFunc={undefined}
+                sortFuncExtraData={undefined}
+                sortIndicator={true}
+                tdAttr={undefined}
+                tdStyle={undefined}
+                thStyle={undefined}
+                width={null}
+              >
+                Employee Id
+              </TableHeaderColumn>,
+              <TableHeaderColumn
+                className=""
+                columnClassName=""
+                columnTitle={false}
+                csvFieldType="string"
+                csvFormat={undefined}
+                csvHeader={undefined}
+                dataAlign="left"
+                dataField="amount"
+                dataFormat={undefined}
+                dataSort={true}
+                defaultASC={false}
+                editColumnClassName=""
+                editTdAttr={undefined}
+                editable={true}
+                expandable={true}
+                filter={undefined}
+                filterFormatted={false}
+                filterValue={undefined}
+                formatExtraData={undefined}
+                headerAlign={undefined}
+                headerTitle={true}
+                hidden={false}
+                hiddenOnInsert={false}
+                invalidEditColumnClassName=""
+                isKey={false}
+                keyValidator={false}
+                onSort={undefined}
+                searchable={true}
+                sort={undefined}
+                sortFunc={undefined}
+                sortFuncExtraData={undefined}
+                sortIndicator={true}
+                tdAttr={undefined}
+                tdStyle={undefined}
+                thStyle={undefined}
+                width={null}
+              >
+                Amount Paid
+              </TableHeaderColumn>,
+            ],
+            "columnFilter": false,
+            "condensed": false,
+            "containerClass": null,
+            "containerStyle": undefined,
+            "csvFileName": "spreadsheet.csv",
+            "data": Array [],
+            "deleteRow": false,
+            "expandColumnOptions": Object {
+              "expandColumnBeforeSelectColumn": true,
+              "expandColumnComponent": undefined,
+              "expandColumnVisible": false,
+            },
+            "expandComponent": undefined,
+            "expandableRow": undefined,
+            "exportCSV": false,
+            "fetchInfo": Object {
+              "dataTotalSize": 0,
+            },
+            "footer": false,
+            "headerContainerClass": null,
+            "headerStyle": undefined,
+            "height": "100%",
+            "hover": true,
+            "ignoreSinglePage": false,
+            "insertRow": false,
+            "keyBoardNav": false,
+            "maxHeight": undefined,
+            "multiColumnSearch": false,
+            "multiColumnSort": 1,
+            "options": Object {
+              "noDataText": "No Payroll Data.  Upload a Timesheet.",
+            },
+            "pagination": false,
+            "printable": false,
+            "replace": false,
+            "scrollTop": undefined,
+            "search": false,
+            "searchPlaceholder": undefined,
+            "selectRow": Object {
+              "bgColor": "",
+              "clickToExpand": false,
+              "clickToSelect": false,
+              "clickToSelectAndEditCell": false,
+              "customComponent": undefined,
+              "hideSelectColumn": false,
+              "mode": "none",
+              "onSelect": undefined,
+              "onSelectAll": undefined,
+              "onlyUnselectVisible": false,
+              "selected": Array [],
+              "showOnlySelected": false,
+              "unselectable": Array [],
+            },
+            "strictSearch": undefined,
+            "striped": true,
+            "tableBodyClass": null,
+            "tableContainerClass": null,
+            "tableFooterClass": null,
+            "tableHeaderClass": null,
+            "tableStyle": undefined,
+            "trClassName": "",
+            "trStyle": undefined,
+            "version": "3",
+            "withoutTabIndex": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Pay Period",
+                "className": "",
+                "columnClassName": "",
+                "columnTitle": false,
+                "csvFieldType": "string",
+                "csvFormat": undefined,
+                "csvHeader": undefined,
+                "dataAlign": "left",
+                "dataField": "period",
+                "dataFormat": [Function],
+                "dataSort": true,
+                "defaultASC": false,
+                "editColumnClassName": "",
+                "editTdAttr": undefined,
+                "editable": true,
+                "expandable": true,
+                "filter": undefined,
+                "filterFormatted": false,
+                "filterValue": undefined,
+                "formatExtraData": undefined,
+                "headerAlign": undefined,
+                "headerTitle": true,
+                "hidden": false,
+                "hiddenOnInsert": false,
+                "invalidEditColumnClassName": "",
+                "isKey": true,
+                "keyValidator": false,
+                "onSort": undefined,
+                "searchable": true,
+                "sort": undefined,
+                "sortFunc": [Function],
+                "sortFuncExtraData": undefined,
+                "sortIndicator": true,
+                "tdAttr": undefined,
+                "tdStyle": undefined,
+                "thStyle": undefined,
+                "width": null,
+              },
+              "ref": null,
+              "rendered": "Pay Period",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Employee Id",
+                "className": "",
+                "columnClassName": "",
+                "columnTitle": false,
+                "csvFieldType": "string",
+                "csvFormat": undefined,
+                "csvHeader": undefined,
+                "dataAlign": "left",
+                "dataField": "employee",
+                "dataFormat": undefined,
+                "dataSort": true,
+                "defaultASC": false,
+                "editColumnClassName": "",
+                "editTdAttr": undefined,
+                "editable": true,
+                "expandable": true,
+                "filter": undefined,
+                "filterFormatted": false,
+                "filterValue": undefined,
+                "formatExtraData": undefined,
+                "headerAlign": undefined,
+                "headerTitle": true,
+                "hidden": false,
+                "hiddenOnInsert": false,
+                "invalidEditColumnClassName": "",
+                "isKey": false,
+                "keyValidator": false,
+                "onSort": undefined,
+                "searchable": true,
+                "sort": undefined,
+                "sortFunc": undefined,
+                "sortFuncExtraData": undefined,
+                "sortIndicator": true,
+                "tdAttr": undefined,
+                "tdStyle": undefined,
+                "thStyle": undefined,
+                "width": null,
+              },
+              "ref": null,
+              "rendered": "Employee Id",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Amount Paid",
+                "className": "",
+                "columnClassName": "",
+                "columnTitle": false,
+                "csvFieldType": "string",
+                "csvFormat": undefined,
+                "csvHeader": undefined,
+                "dataAlign": "left",
+                "dataField": "amount",
+                "dataFormat": undefined,
+                "dataSort": true,
+                "defaultASC": false,
+                "editColumnClassName": "",
+                "editTdAttr": undefined,
+                "editable": true,
+                "expandable": true,
+                "filter": undefined,
+                "filterFormatted": false,
+                "filterValue": undefined,
+                "formatExtraData": undefined,
+                "headerAlign": undefined,
+                "headerTitle": true,
+                "hidden": false,
+                "hiddenOnInsert": false,
+                "invalidEditColumnClassName": "",
+                "isKey": false,
+                "keyValidator": false,
+                "onSort": undefined,
+                "searchable": true,
+                "sort": undefined,
+                "sortFunc": undefined,
+                "sortFuncExtraData": undefined,
+                "sortIndicator": true,
+                "tdAttr": undefined,
+                "tdStyle": undefined,
+                "thStyle": undefined,
+                "width": null,
+              },
+              "ref": null,
+              "rendered": "Amount Paid",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

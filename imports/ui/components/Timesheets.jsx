@@ -21,7 +21,7 @@ const Timesheets = ({
   options = { noDataText: 'No Time Entries.  Upload a Timesheet.' },
   error = null,
   dismissError,
-  fileTypes = '',
+  fileTypes = '.csv',
   createTimesheetRequest,
   createTimesheetFailed,
   dateFormat = singleDateFormat

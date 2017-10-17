@@ -35,7 +35,7 @@ describe("FetchTimesheets Worker", () => {
 
     return expectSaga(fetchTimesheetsWorker)
       .provide(provider)
-      .put(timesheetsRequestFailed(error.message))
+      .put(timesheetsRequestFailed(error.error))
       .run();
   });
 });

@@ -16,9 +16,8 @@ import Timesheets from "../components/Timesheets";
 export const mapStateToProps = (state) => {
   return {
     timesheets: state.timesheets.timesheets,
-    error: state.timesheets.error,
-    fileTypes: '.csv'
-   };
+    error: state.timesheets.error
+  };
 };
 
 // Connect ACTIONS to the props fed into the component.

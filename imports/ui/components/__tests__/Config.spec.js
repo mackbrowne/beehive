@@ -25,9 +25,7 @@ describe("<Config />", () => {
     });
 
     it("renders config correctly", () => {
-      const tree = ReactTestRenderer.create(
-        <Config {...defaultProps} />
-      ).toJSON();
+      const tree = ReactTestRenderer.create(<Config />).toJSON();
       expect(tree).toMatchSnapshot();
     });
   });

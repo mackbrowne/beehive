@@ -14,8 +14,8 @@ export function* fetchTimesheetsWorker(action) {
   try {
     const timesheets = yield call(Meteor.callPromise, "timesheets.fetchAll");
     yield put(timesheetsReceived(timesheets));
-  } catch ({ message }) {
-    yield put(timesheetsRequestFailed(message));
+  } catch ({ error }) {
+    yield put(timesheetsRequestFailed(error));
   }
 }
 
