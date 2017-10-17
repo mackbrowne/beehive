@@ -6,6 +6,10 @@ import Moment from 'react-moment';
 import { Container, Row, Col, Button } from "reactstrap";
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
+// Helpers
+import { sortPayrollPeriods } from "../helpers/sort";
+import { payrollDatesFormat, moneyFormat } from "../helpers/format";
+
 /**
  * Homepage for the app!
  *
@@ -15,17 +19,9 @@ import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 const Home = ({
   payments,
   options = { noDataText: 'No Payroll Data.  Upload a Timesheet.' },
-  dateFormat = ([start, end]) => <span>
-    <Moment date={start} format="DD/MM/YYYY" /> - <Moment date={end} format="DD/MM/YYYY" />
-  </span>,
-  moneyFormat = (cell) => `\$${parseFloat(Math.round(cell * 100) / 100).toFixed(2)}`,
-  sortFunc = ({period: [a]}, {period: [b]}, order) => {
-    if (order === 'desc') {
-      return a.getTime() - b.getTime();
-    } else {
-      return b.getTime() - a.getTime();
-    }
-  }
+  dateFormat = payrollDatesFormat,
+  moneyFormat = moneyFormat,
+  sortFunc = sortPayrollPeriods
 }) =>
 <Container className="page timesheets" fluid>
   <h3>Current Payroll Report</h3>

@@ -7,6 +7,9 @@ import { Container, Row, Col, Alert, Button, Form, FormGroup, Label, Input } fro
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import Dropzone from 'react-dropzone';
 
+// Helpers
+import { singleDateFormat } from "../helpers/format";
+
 /**
  * A list of settings.
  *
@@ -21,8 +24,7 @@ const Timesheets = ({
   fileTypes = '',
   createTimesheetRequest,
   createTimesheetFailed,
-  dateFormat = (cell, row) =>
-    <Moment date={cell} format="YYYY/MM/DD" />
+  dateFormat = singleDateFormat
 }) => {
   const onDrop = accepted => accepted.length ? createTimesheetRequest(accepted[0]) : createTimesheetFailed("Invalid File");
 
