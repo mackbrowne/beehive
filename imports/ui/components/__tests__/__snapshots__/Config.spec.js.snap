@@ -1,12 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Config /> Config SnapShot renders config correctly 1`] = `
-<aside>
+<div
+  className="config container-fluid"
+>
   <div
-    className="config container-fluid"
+    className="row"
   >
     <div
-      className="row"
+      className="col"
     >
       <div
         className="col"
@@ -103,5 +105,5 @@ exports[`<Config /> Config SnapShot renders config correctly with default props 
       </div>
     </div>
   </div>
-</aside>
+</div>
 `;

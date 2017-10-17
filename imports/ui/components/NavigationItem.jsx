@@ -11,10 +11,7 @@ import { Link } from "react-router-dom";
 const NavigationItem = ({
   label = "Home",
   path = "/"
-}
-
-
- )                     =>
+}) =>
   <Link className="navigation-item" to={path}>
     {label}
   </Link>;

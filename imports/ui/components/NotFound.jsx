@@ -4,7 +4,7 @@ import React from 'react';
 // Components
 import { Container, Row, Col } from 'reactstrap';
 
-const NotFound = ()                     => (
+const NotFound = () => (
   <Container className="not-found">
     <Row>
       <Col>

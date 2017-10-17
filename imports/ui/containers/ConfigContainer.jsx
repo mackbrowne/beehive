@@ -8,13 +8,13 @@ import Config from "../components/Config";
 
 // Connect the STATE to the props fed into the component.
 export const mapStateToProps = (state) => {
-  return {  };
+  return {};
 };
 
 // Connect ACTIONS to the props fed into the component.
 export const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
-    {  },
+    {},
     dispatch
   );
 };

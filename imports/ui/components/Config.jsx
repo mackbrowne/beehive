@@ -10,18 +10,15 @@ import { Container, Row, Col } from "reactstrap";
  * @param {Object} props All the properties passed to the React Component.
  * @returns {Element} Stateless functional React component.
  */
-const Config = ({
-}) =>
-  <aside>
-    <Container className="config" fluid>
-      <Row>
-        <Col>
-          <h3>Set Jobs</h3>
-          <p>Job A - $20/hour</p>
-          <p>Job B - $30/hour</p>
-        </Col>
-      </Row>
-    </Container>
-  </aside>;
+const Config = () =>
+  <Container className="config" fluid>
+    <Row>
+      <Col>
+        <h3>Set Jobs</h3>
+        <p>Job A - $20/hour</p>
+        <p>Job B - $30/hour</p>
+      </Col>
+    </Row>
+  </Container>;
 
 export default Config;
