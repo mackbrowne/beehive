@@ -22,7 +22,7 @@ export function* createTimesheetWorker(action) {
     const timesheet = yield call(
       Meteor.callPromise,
       "timesheets.insert",
-      timesheetFile
+      { timesheet: timesheetFile }
     );
     window.URL.revokeObjectURL(action.payload.preview);
     yield put(createTimesheetSuccessful(timesheet));

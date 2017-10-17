@@ -1,8 +1,8 @@
 // Framework
 import { Meteor } from "meteor/meteor";
-import SimpleSchema from "simpl-schema";
 import { ValidatedMethod } from "meteor/mdg:validated-method";
 import { DDPRateLimiter } from "meteor/ddp-rate-limiter";
+import SimpleSchema from "simpl-schema";
 import moment from "moment";
 import csv from "csv";
 
@@ -22,8 +22,10 @@ export const fetchAll = new ValidatedMethod({
 
 export const insert = new ValidatedMethod({
   name: "timesheets.insert",
-  validate: null,
-  run(timesheet) {
+  validate: new SimpleSchema({
+    timesheet: { type: String }
+  }).validator(),
+  run({timesheet}) {
     const entries = Meteor.wrapAsync(csv.parse)(timesheet);
     if (entries.length < 2) {
       throw new Meteor.Error("time does not have enough rows to be parsed");

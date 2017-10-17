@@ -23,6 +23,7 @@ export const fetchAll = new ValidatedMethod({
       { sort: { date: -1, employee: -1 } }
     ).fetch();
 
+    //TODO: this is effective, but messy
     return (
       _.chain(timesheets)
         .groupBy(({ date }) => {
