@@ -33,7 +33,7 @@ export const TimesheetsReducer = (state = DEFAULT_STATE, action) => {
       return {
         ...state,
         error: null
-      }
+      };
     case CREATE_TIMESHEET_SUCCESSFUL:
     case FETCH_TIMESHEETS_REQUEST:
     case CREATE_TIMESHEET_REQUEST:

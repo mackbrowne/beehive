@@ -4,8 +4,7 @@ import Moment from 'react-moment';
 
 // Components
 import { Container, Row, Col, Button } from "reactstrap";
-import SideBarContainer from "../containers/SideBarContainer";
-import GameContainer from "../containers/GameContainer";
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 /**
  * Homepage for the app!

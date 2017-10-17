@@ -3,9 +3,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-// Actions to Bind
-import toggleSideBar from "../actionCreators/ui/toggleSideBar";
-
 // Component to Contain
 import Home from "../components/Home";
 

@@ -11,7 +11,6 @@ import createTimesheetSaga from "./sagas/timesheets/createTimesheet";
 import fetchTimesheetsSaga from "./sagas/timesheets/fetchTimesheets";
 import fetchPayrollSaga from "./sagas/payroll/fetchPayroll";
 
-
 export const combinedSagas = () => [
   initSaga,
   createTimesheetSaga,

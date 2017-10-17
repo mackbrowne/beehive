@@ -20,7 +20,7 @@ describe("FetchTimesheets Worker", () => {
   it("works normally", () => {
     testSaga(fetchTimesheetsWorker)
       .next()
-      .call(Meteor.callPromise, "timesheets.fetchAllForUser")
+      .call(Meteor.callPromise, "timesheets.fetchAll")
       .next()
       .put(timesheetsReceived())
       .next()
@@ -35,7 +35,7 @@ describe("FetchTimesheets Worker", () => {
 
     return expectSaga(fetchTimesheetsWorker)
       .provide(provider)
-      .put(timesheetsRequestFailed("failed"))
+      .put(timesheetsRequestFailed(error.message))
       .run();
   });
 });

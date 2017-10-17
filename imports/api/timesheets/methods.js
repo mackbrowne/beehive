@@ -16,7 +16,7 @@ export const fetchAll = new ValidatedMethod({
   name: "timesheets.fetchAll",
   validate: null,
   run() {
-    return Timesheets.find({},{sort: {date: -1}}).fetch();
+    return Timesheets.find({}, { sort: { date: -1 } }).fetch();
   }
 });
 
@@ -36,9 +36,7 @@ export const insert = new ValidatedMethod({
 
     const existingReport = Timesheets.findOne({ reportId });
     if (existingReport) {
-      throw new Meteor.Error(
-        `Report #${reportId} has already been uploaded.`
-      );
+      throw new Meteor.Error(`Report #${reportId} has already been uploaded.`);
     }
 
     return entries.map(([workDate, hours, employee, job]) =>

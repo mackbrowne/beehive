@@ -12,13 +12,16 @@ import {
 import { INIT } from "../../actionTypes/generic";
 
 // Action Creators
-import fetchBeesRequest from "../../actionCreators/bees/fetchBeesRequest";
+import fetchTimesheetsRequest from "../../actionCreators/timesheets/fetchTimesheetsRequest";
+import fetchPayrollRequest from "../../actionCreators/payroll/fetchPayrollRequest";
 
 describe("Initialize Async State Worker", () => {
   it("works normally", () => {
     testSaga(initializeAsyncStateWorker)
       .next()
-      .put(fetchBeesRequest())
+      .put(fetchTimesheetsRequest())
+      .next()
+      .put(fetchPayrollRequest())
       .next()
       .isDone();
   });

@@ -3,7 +3,6 @@ import React from "react";
 
 // Components
 import { Container, Row, Col } from "reactstrap";
-import FieldRows from "./FieldRows";
 
 /**
  * A list of Configuration options
@@ -12,21 +11,14 @@ import FieldRows from "./FieldRows";
  * @returns {Element} Stateless functional React component.
  */
 const Config = ({
-  configFields = {},
-  configSettingAction
-}
-
-
- )                     =>
+}) =>
   <aside>
     <Container className="config" fluid>
       <Row>
         <Col>
-          <FieldRows
-            heading="Configuration"
-            fields={configFields}
-            stateSettingAction={configSettingAction}
-          />
+          <h3>Set Jobs</h3>
+          <p>Job A - $20/hour</p>
+          <p>Job B - $30/hour</p>
         </Col>
       </Row>
     </Container>

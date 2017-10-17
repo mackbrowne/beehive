@@ -25,12 +25,8 @@ export const mapStateToProps = (state) => {
 export const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
     {
-      onDrop: (accepted, rejected) => {
-        if(accepted.length < 1){
-          return createTimesheetFailed("Invalid File");
-        }
-        return createTimesheetRequest(accepted[0]);
-      },
+      createTimesheetRequest,
+      createTimesheetFailed,
       dismissError: dismissTimesheetError
     },
     dispatch

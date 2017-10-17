@@ -1,1 +1,0 @@
-export const SET_CONFIG_VALUE = "CONFIG/SET_CONFIG_VALUE";
