@@ -9,11 +9,14 @@ import rootReducer from "./rootReducer";
 import initSaga from "./sagas/init";
 import createTimesheetSaga from "./sagas/timesheets/createTimesheet";
 import fetchTimesheetsSaga from "./sagas/timesheets/fetchTimesheets";
+import fetchPayrollSaga from "./sagas/payroll/fetchPayroll";
+
 
 export const combinedSagas = () => [
   initSaga,
   createTimesheetSaga,
-  fetchTimesheetsSaga
+  fetchTimesheetsSaga,
+  fetchPayrollSaga
 ];
 
 export const registerSagas = (sagaMiddleware, sagas) =>

@@ -1,6 +1,6 @@
 // Framework
 import { Meteor } from "meteor/meteor";
-import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
 
 import { readAsText } from "promise-file-reader";
 
@@ -10,7 +10,9 @@ import { CREATE_TIMESHEET_REQUEST } from "../../actionTypes/timesheets";
 // Action Creators
 import createTimesheetFailed from "../../actionCreators/timesheets/createTimesheetFailed";
 import createTimesheetSuccessful from "../../actionCreators/timesheets/createTimesheetSuccessful";
+
 import fetchTimesheetsRequest from "../../actionCreators/timesheets/fetchTimesheetsRequest";
+import fetchPayrollRequest from "../../actionCreators/payroll/fetchPayrollRequest";
 
 // Worker
 export function* createTimesheetWorker(action) {
@@ -25,14 +27,15 @@ export function* createTimesheetWorker(action) {
     window.URL.revokeObjectURL(action.payload.preview);
     yield put(createTimesheetSuccessful(timesheet));
     yield put(fetchTimesheetsRequest());
-  } catch ({ message }) {
-    yield put(createTimesheetFailed(message));
+    yield put(fetchPayrollRequest());
+  } catch ({ error }) {
+    yield put(createTimesheetFailed(error));
   }
 }
 
 // Watcher
 export function* createTimesheetWatcher() {
-  yield takeLatest(CREATE_TIMESHEET_REQUEST, createTimesheetWorker);
+  yield takeEvery(CREATE_TIMESHEET_REQUEST, createTimesheetWorker);
 }
 
 export default createTimesheetWatcher;

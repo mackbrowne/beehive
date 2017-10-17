@@ -1,6 +1,6 @@
 // Framework
 import { Meteor } from "meteor/meteor";
-import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
+import { call, put, takeLatest } from "redux-saga/effects";
 
 // Action Types
 import { FETCH_TIMESHEETS_REQUEST } from "../../actionTypes/timesheets";

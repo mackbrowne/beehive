@@ -24,42 +24,32 @@ export const insert = new ValidatedMethod({
   name: "timesheets.insert",
   validate: null,
   run(timesheet) {
-    try {
-      const entries = Meteor.wrapAsync(csv.parse)(timesheet);
-      if (entries.length < 2) {
-        throw new Meteor.Error("time does not have enough rows to be parsed");
-      }
-
-      //the last entry in index spot 1 is the report id
-      //popping it removes it from entries
-      const headers = entries.shift();
-      const reportId = entries.pop()[1];
-
-      const existingReport = Timesheets.findOne({ reportId });
-      if (existingReport) {
-        throw new Meteor.Error(
-          `Report ID#${reportId} has already been uploaded.`
-        );
-      }
-
-      return entries.map(([workDate, hours, employee, job]) =>
-        Timesheets.insert({
-          reportId,
-          date: moment(workDate, "DD/MM/YYYY").toDate(),
-          hours: parseInt(hours),
-          employee,
-          job
-        })
-      );
-    } catch (error) {
-      const newError = new Meteor.Error(
-        "api.timesheets.insert.unspecifiedError",
-        "Could not insert a new timesheet.",
-        error
-      );
-      console.error(newError);
-      throw newError;
+    const entries = Meteor.wrapAsync(csv.parse)(timesheet);
+    if (entries.length < 2) {
+      throw new Meteor.Error("time does not have enough rows to be parsed");
     }
+
+    //the last entry in index spot 1 is the report id
+    //popping it removes it from entries
+    const headers = entries.shift();
+    const reportId = entries.pop()[1];
+
+    const existingReport = Timesheets.findOne({ reportId });
+    if (existingReport) {
+      throw new Meteor.Error(
+        `Report #${reportId} has already been uploaded.`
+      );
+    }
+
+    return entries.map(([workDate, hours, employee, job]) =>
+      Timesheets.insert({
+        reportId,
+        date: moment(workDate, "DD/MM/YYYY").toDate(),
+        hours: parseInt(hours),
+        employee,
+        job
+      })
+    );
   }
 });
 

@@ -7,6 +7,8 @@ import { bindActionCreators } from "redux";
 import createTimesheetRequest from "../actionCreators/timesheets/createTimesheetRequest";
 import createTimesheetFailed from "../actionCreators/timesheets/createTimesheetFailed";
 
+import dismissTimesheetError from "../actionCreators/timesheets/dismissTimesheetError";
+
 // Component to Contain
 import Timesheets from "../components/Timesheets";
 
@@ -14,6 +16,7 @@ import Timesheets from "../components/Timesheets";
 export const mapStateToProps = (state) => {
   return {
     timesheets: state.timesheets.timesheets,
+    error: state.timesheets.error,
     fileTypes: '.csv'
    };
 };
@@ -27,7 +30,8 @@ export const mapDispatchToProps = (dispatch) => {
           return createTimesheetFailed("Invalid File");
         }
         return createTimesheetRequest(accepted[0]);
-      }
+      },
+      dismissError: dismissTimesheetError
     },
     dispatch
   );

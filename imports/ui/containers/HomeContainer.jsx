@@ -12,14 +12,14 @@ import Home from "../components/Home";
 // Connect the STATE to the props fed into the component.
 export const mapStateToProps = (state) => {
   return {
-    sideBarOpen: state.ui.sideBarOpen
+    payments: state.payroll.payroll
   };
 };
 
 // Connect ACTIONS to the props fed into the component.
 export const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
-    { toggleSideBar: toggleSideBar },
+    {},
     dispatch
   );
 };

@@ -14,9 +14,7 @@ import NavigationItem from "./NavigationItem";
  */
 const Navigation = ({
   navigationItems = []
-}
-
- )                     =>
+}) =>
   <nav className="navigation">
     <Container fluid>
       <Row>
