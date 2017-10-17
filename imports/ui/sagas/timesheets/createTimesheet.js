@@ -19,11 +19,9 @@ export function* createTimesheetWorker(action) {
   try {
     const callValues = { timesheet: action.payload };
     const timesheetFile = yield call(readAsText, action.payload);
-    const timesheet = yield call(
-      Meteor.callPromise,
-      "timesheets.insert",
-      { timesheet: timesheetFile }
-    );
+    const timesheet = yield call(Meteor.callPromise, "timesheets.insert", {
+      timesheet: timesheetFile
+    });
     window.URL.revokeObjectURL(action.payload.preview);
     yield put(createTimesheetSuccessful(timesheet));
     yield put(fetchTimesheetsRequest());

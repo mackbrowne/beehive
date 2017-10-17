@@ -25,7 +25,7 @@ export const insert = new ValidatedMethod({
   validate: new SimpleSchema({
     timesheet: { type: String }
   }).validator(),
-  run({timesheet}) {
+  run({ timesheet }) {
     const entries = Meteor.wrapAsync(csv.parse)(timesheet);
     if (entries.length < 2) {
       throw new Meteor.Error("time does not have enough rows to be parsed");
