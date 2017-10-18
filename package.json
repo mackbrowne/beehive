@@ -9,6 +9,7 @@
     "lint:fix": "./node_modules/.bin/eslint . --fix",
     "lint:check": "./node_modules/.bin/eslint --print-config .eslintrc.js | ./node_modules/.bin/eslint-config-prettier-check",
     "test": "jest --silent",
+    "test:verbose": "jest",
     "test:snap": "jest -u",
     "test:watch": "jest --watch",
     "precommit": "lint-staged"
