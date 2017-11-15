@@ -48,7 +48,7 @@
     "jest-meteor-stubs": "github:mackbrowne/jest-meteor-stubs#master",
     "prettier": "1.5.3",
     "react-test-renderer": "^15.6.1",
-    "redux-devtools": "3.4.0",
+    "redux-devtools": "3.4.1",
     "redux-saga-test-plan": "^3.2.0"
   },
   "jest": {
