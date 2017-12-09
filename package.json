@@ -39,7 +39,7 @@
     "babel-preset-react": "6.24.1",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-15": "^1.0.0",
-    "eslint": "4.12.0",
+    "eslint": "4.13.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-prettier": "2.1.2",
     "eslint-plugin-react": "7.5.1",
