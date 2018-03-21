@@ -32,7 +32,7 @@
     "underscore": "1.8.3"
   },
   "devDependencies": {
-    "autoprefixer": "8.1.0",
+    "autoprefixer": "8.2.0",
     "babel-eslint": "8.0.2",
     "babel-jest": "21.0.0",
     "babel-preset-env": "1.6.1",
