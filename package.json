@@ -24,7 +24,7 @@
     "react-redux": "5.0.7",
     "react-router-dom": "4.1.2",
     "react-transition-group": "2.3.0",
-    "reactstrap": "4.8.0",
+    "reactstrap": "5.0.0",
     "redux": "3.7.2",
     "redux-saga": "0.16.0",
     "reselect": "3.0.1",
