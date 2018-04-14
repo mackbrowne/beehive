@@ -11,13 +11,13 @@ exports[`BeeCard BeeCard SnapShot renders BeeCard correctly 1`] = `
     width="100%"
   />
   <div
-    className="card-block"
+    className="card-body"
   >
-    <h4
+    <h5
       className="card-title"
     >
       test bee
-    </h4>
+    </h5>
     <h6
       className="card-subtitle"
     >

@@ -38,7 +38,7 @@ exports[`<Settings /> Settings SnapShot renders Settings correctly 1`] = `
                   className="field-row form-group"
                 >
                   <label
-                    className=" form-control-label"
+                    className=""
                     htmlFor="tickRate-number-field-row-input"
                   >
                     Tick Rate

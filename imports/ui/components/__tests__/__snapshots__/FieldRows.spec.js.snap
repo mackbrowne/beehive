@@ -28,7 +28,7 @@ exports[`<FieldRows /> FieldRows SnapShot renders FieldRows correctly 1`] = `
           className="field-row form-group"
         >
           <label
-            className=" form-control-label"
+            className=""
             htmlFor="tickrate-number-field-row-input"
           >
             Tickrate
