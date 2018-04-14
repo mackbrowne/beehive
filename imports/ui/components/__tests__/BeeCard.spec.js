@@ -43,20 +43,29 @@ describe("BeeCard", () => {
     });
 
     it("checks rendering of CardImg", () => {
-      const { type, props: { src, alt } } = cardImg;
+      const {
+        type,
+        props: { src, alt }
+      } = cardImg;
       expect(type).toBe(CardImg);
       expect(src).toBe(`./images/bees/${bee.type.toLowerCase()}.jpg`);
       expect(alt).toBe(`${bee.type} Bee`);
     });
 
     it("checks rendering of CardTitle", () => {
-      const { type, props: { children } } = cardTitle;
+      const {
+        type,
+        props: { children }
+      } = cardTitle;
       expect(type).toBe(CardTitle);
       expect(children).toBe(bee.name);
     });
 
     it("checks rendering of CardSubtitle", () => {
-      const { type, props: { children } } = cardSubtitle;
+      const {
+        type,
+        props: { children }
+      } = cardSubtitle;
       expect(type).toBe(CardSubtitle);
       expect(children).toBe(bee.type);
     });
