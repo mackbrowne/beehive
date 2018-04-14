@@ -3,7 +3,6 @@ import ReactTestRenderer from "react-test-renderer";
 import { shallow } from "enzyme";
 
 import Config from "../Config";
-import FieldRows from "../FieldRows";
 
 describe("<Config />", () => {
   let defaultProps;
@@ -31,21 +30,10 @@ describe("<Config />", () => {
   });
 
   describe("Config Props", () => {
-    let wrapper, fieldRows;
+    let wrapper;
 
     beforeEach(() => {
       const wrapper = shallow(<Config {...defaultProps} />);
-      fieldRows = wrapper.find(FieldRows);
-    });
-
-    it("should pass fields prop to FieldRows", () => {
-      const { fields } = fieldRows.props();
-      expect(fields).toBe(defaultProps.configFields);
-    });
-
-    it("pass stateSettingAction prop to fieldRows", () => {
-      const { stateSettingAction } = fieldRows.props();
-      expect(stateSettingAction).toBe(defaultProps.configSettingAction);
     });
   });
 });

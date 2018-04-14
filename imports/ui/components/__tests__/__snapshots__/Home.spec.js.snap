@@ -16,7 +16,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": null,
+    "key": undefined,
     "nodeType": "function",
     "props": Object {
       "children": Array [
@@ -56,6 +56,7 @@ ShallowWrapper {
               "expandColumnBeforeSelectColumn": true,
               "expandColumnComponent": undefined,
               "expandColumnVisible": false,
+              "expandedColumnHeaderComponent": undefined,
             }
           }
           expandComponent={undefined}
@@ -84,6 +85,7 @@ ShallowWrapper {
           }
           pagination={false}
           printable={false}
+          renderAlert={true}
           replace={false}
           scrollTop={undefined}
           search={false}
@@ -247,7 +249,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": "Current Payroll Report",
@@ -258,7 +260,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "autoCollapse": Object {
@@ -410,6 +412,7 @@ ShallowWrapper {
             "expandColumnBeforeSelectColumn": true,
             "expandColumnComponent": undefined,
             "expandColumnVisible": false,
+            "expandedColumnHeaderComponent": undefined,
           },
           "expandComponent": undefined,
           "expandableRow": undefined,
@@ -433,6 +436,7 @@ ShallowWrapper {
           },
           "pagination": false,
           "printable": false,
+          "renderAlert": true,
           "replace": false,
           "scrollTop": undefined,
           "search": false,
@@ -468,7 +472,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Pay Period",
@@ -515,7 +519,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Employee Id",
@@ -562,7 +566,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Amount Paid",
@@ -616,7 +620,7 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": null,
+      "key": undefined,
       "nodeType": "function",
       "props": Object {
         "children": Array [
@@ -656,6 +660,7 @@ ShallowWrapper {
                 "expandColumnBeforeSelectColumn": true,
                 "expandColumnComponent": undefined,
                 "expandColumnVisible": false,
+                "expandedColumnHeaderComponent": undefined,
               }
             }
             expandComponent={undefined}
@@ -684,6 +689,7 @@ ShallowWrapper {
             }
             pagination={false}
             printable={false}
+            renderAlert={true}
             replace={false}
             scrollTop={undefined}
             search={false}
@@ -847,7 +853,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": "Current Payroll Report",
@@ -858,7 +864,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
             "autoCollapse": Object {
@@ -1010,6 +1016,7 @@ ShallowWrapper {
               "expandColumnBeforeSelectColumn": true,
               "expandColumnComponent": undefined,
               "expandColumnVisible": false,
+              "expandedColumnHeaderComponent": undefined,
             },
             "expandComponent": undefined,
             "expandableRow": undefined,
@@ -1033,6 +1040,7 @@ ShallowWrapper {
             },
             "pagination": false,
             "printable": false,
+            "renderAlert": true,
             "replace": false,
             "scrollTop": undefined,
             "search": false,
@@ -1068,7 +1076,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Pay Period",
@@ -1115,7 +1123,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Employee Id",
@@ -1162,7 +1170,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Amount Paid",
@@ -1215,9 +1223,9 @@ ShallowWrapper {
     },
   ],
   Symbol(enzyme.__options__): Object {
-    "adapter": ReactFifteenAdapter {
+    "adapter": ReactSixteenAdapter {
       "options": Object {
-        "supportPrevContextArgumentOfComponentDidUpdate": true,
+        "enableComponentDidUpdateOnSetState": true,
       },
     },
   },

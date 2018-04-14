@@ -5,9 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Timesheets
-    createTimesheetFailed={[Function]}
-    createTimesheetRequest={[Function]}
-    dismissError={[Function]}
+    createTimesheetFailed={[MockFunction]}
+    createTimesheetRequest={[MockFunction]}
+    dismissError={[MockFunction]}
     error="test error"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -19,7 +19,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": null,
+    "key": undefined,
     "nodeType": "function",
     "props": Object {
       "children": Array [
@@ -27,13 +27,31 @@ ShallowWrapper {
           Input New Time Sheet
         </h3>,
         <Alert
+          closeAriaLabel="Close"
           color="danger"
           isOpen={true}
           tag="div"
-          toggle={[Function]}
-          transitionAppearTimeout={150}
-          transitionEnterTimeout={150}
-          transitionLeaveTimeout={150}
+          toggle={[MockFunction]}
+          transition={
+            Object {
+              "appear": true,
+              "baseClass": "fade",
+              "baseClassActive": "show",
+              "enter": true,
+              "exit": true,
+              "in": true,
+              "mountOnEnter": false,
+              "onEnter": [Function],
+              "onEntered": [Function],
+              "onEntering": [Function],
+              "onExit": [Function],
+              "onExited": [Function],
+              "onExiting": [Function],
+              "tag": "div",
+              "timeout": 150,
+              "unmountOnExit": true,
+            }
+          }
         >
           Error - 
           test error
@@ -59,7 +77,7 @@ ShallowWrapper {
               <FormGroup
                 tag="div"
               >
-                <Dropzone
+                <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -80,7 +98,7 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>
+                </t>
               </FormGroup>
             </Form>
           </Col>
@@ -121,6 +139,7 @@ ShallowWrapper {
               "expandColumnBeforeSelectColumn": true,
               "expandColumnComponent": undefined,
               "expandColumnVisible": false,
+              "expandedColumnHeaderComponent": undefined,
             }
           }
           expandComponent={undefined}
@@ -149,6 +168,7 @@ ShallowWrapper {
           }
           pagination={false}
           printable={false}
+          renderAlert={true}
           replace={false}
           scrollTop={undefined}
           search={false}
@@ -352,7 +372,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": "Input New Time Sheet",
@@ -363,20 +383,36 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "children": Array [
             "Error - ",
             "test error",
           ],
+          "closeAriaLabel": "Close",
           "color": "danger",
           "isOpen": true,
           "tag": "div",
-          "toggle": [Function],
-          "transitionAppearTimeout": 150,
-          "transitionEnterTimeout": 150,
-          "transitionLeaveTimeout": 150,
+          "toggle": [MockFunction],
+          "transition": Object {
+            "appear": true,
+            "baseClass": "fade",
+            "baseClassActive": "show",
+            "enter": true,
+            "exit": true,
+            "in": true,
+            "mountOnEnter": false,
+            "onEnter": [Function],
+            "onEntered": [Function],
+            "onEntering": [Function],
+            "onExit": [Function],
+            "onExited": [Function],
+            "onExiting": [Function],
+            "tag": "div",
+            "timeout": 150,
+            "unmountOnExit": true,
+          },
         },
         "ref": null,
         "rendered": Array [
@@ -387,7 +423,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "children": <Col
@@ -408,7 +444,7 @@ ShallowWrapper {
               <FormGroup
                 tag="div"
               >
-                <Dropzone
+                <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -429,7 +465,7 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>
+                </t>
               </FormGroup>
             </Form>
           </Col>,
@@ -438,7 +474,7 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": <Form
@@ -447,7 +483,7 @@ ShallowWrapper {
               <FormGroup
                 tag="div"
               >
-                <Dropzone
+                <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -468,7 +504,7 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>
+                </t>
               </FormGroup>
             </Form>,
             "tag": "div",
@@ -483,13 +519,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "function",
             "props": Object {
               "children": <FormGroup
                 tag="div"
               >
-                <Dropzone
+                <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -510,17 +546,17 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>
+                </t>
               </FormGroup>,
               "tag": "form",
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <Dropzone
+                "children": <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -541,13 +577,13 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>,
+                </t>,
                 "tag": "div",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "class",
                 "props": Object {
                   "accept": ".csv",
@@ -576,7 +612,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Try dropping a file here, or click to select files to upload.",
@@ -588,7 +624,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Only *.csv files will be accepted",
@@ -611,7 +647,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": "Current Time Reports",
@@ -622,7 +658,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "autoCollapse": Object {
@@ -814,6 +850,7 @@ ShallowWrapper {
             "expandColumnBeforeSelectColumn": true,
             "expandColumnComponent": undefined,
             "expandColumnVisible": false,
+            "expandedColumnHeaderComponent": undefined,
           },
           "expandComponent": undefined,
           "expandableRow": undefined,
@@ -837,6 +874,7 @@ ShallowWrapper {
           },
           "pagination": false,
           "printable": false,
+          "renderAlert": true,
           "replace": false,
           "scrollTop": undefined,
           "search": false,
@@ -872,7 +910,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Date",
@@ -919,7 +957,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Hours",
@@ -966,7 +1004,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Employee",
@@ -1013,7 +1051,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Job",
@@ -1067,7 +1105,7 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": null,
+      "key": undefined,
       "nodeType": "function",
       "props": Object {
         "children": Array [
@@ -1075,13 +1113,31 @@ ShallowWrapper {
             Input New Time Sheet
           </h3>,
           <Alert
+            closeAriaLabel="Close"
             color="danger"
             isOpen={true}
             tag="div"
-            toggle={[Function]}
-            transitionAppearTimeout={150}
-            transitionEnterTimeout={150}
-            transitionLeaveTimeout={150}
+            toggle={[MockFunction]}
+            transition={
+              Object {
+                "appear": true,
+                "baseClass": "fade",
+                "baseClassActive": "show",
+                "enter": true,
+                "exit": true,
+                "in": true,
+                "mountOnEnter": false,
+                "onEnter": [Function],
+                "onEntered": [Function],
+                "onEntering": [Function],
+                "onExit": [Function],
+                "onExited": [Function],
+                "onExiting": [Function],
+                "tag": "div",
+                "timeout": 150,
+                "unmountOnExit": true,
+              }
+            }
           >
             Error - 
             test error
@@ -1107,7 +1163,7 @@ ShallowWrapper {
                 <FormGroup
                   tag="div"
                 >
-                  <Dropzone
+                  <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -1128,7 +1184,7 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>
+                  </t>
                 </FormGroup>
               </Form>
             </Col>
@@ -1169,6 +1225,7 @@ ShallowWrapper {
                 "expandColumnBeforeSelectColumn": true,
                 "expandColumnComponent": undefined,
                 "expandColumnVisible": false,
+                "expandedColumnHeaderComponent": undefined,
               }
             }
             expandComponent={undefined}
@@ -1197,6 +1254,7 @@ ShallowWrapper {
             }
             pagination={false}
             printable={false}
+            renderAlert={true}
             replace={false}
             scrollTop={undefined}
             search={false}
@@ -1400,7 +1458,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": "Input New Time Sheet",
@@ -1411,20 +1469,36 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": Array [
               "Error - ",
               "test error",
             ],
+            "closeAriaLabel": "Close",
             "color": "danger",
             "isOpen": true,
             "tag": "div",
-            "toggle": [Function],
-            "transitionAppearTimeout": 150,
-            "transitionEnterTimeout": 150,
-            "transitionLeaveTimeout": 150,
+            "toggle": [MockFunction],
+            "transition": Object {
+              "appear": true,
+              "baseClass": "fade",
+              "baseClassActive": "show",
+              "enter": true,
+              "exit": true,
+              "in": true,
+              "mountOnEnter": false,
+              "onEnter": [Function],
+              "onEntered": [Function],
+              "onEntering": [Function],
+              "onExit": [Function],
+              "onExited": [Function],
+              "onExiting": [Function],
+              "tag": "div",
+              "timeout": 150,
+              "unmountOnExit": true,
+            },
           },
           "ref": null,
           "rendered": Array [
@@ -1435,7 +1509,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": <Col
@@ -1456,7 +1530,7 @@ ShallowWrapper {
                 <FormGroup
                   tag="div"
                 >
-                  <Dropzone
+                  <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -1477,7 +1551,7 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>
+                  </t>
                 </FormGroup>
               </Form>
             </Col>,
@@ -1486,7 +1560,7 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "function",
             "props": Object {
               "children": <Form
@@ -1495,7 +1569,7 @@ ShallowWrapper {
                 <FormGroup
                   tag="div"
                 >
-                  <Dropzone
+                  <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -1516,7 +1590,7 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>
+                  </t>
                 </FormGroup>
               </Form>,
               "tag": "div",
@@ -1531,13 +1605,13 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "function",
               "props": Object {
                 "children": <FormGroup
                   tag="div"
                 >
-                  <Dropzone
+                  <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -1558,17 +1632,17 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>
+                  </t>
                 </FormGroup>,
                 "tag": "form",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": <Dropzone
+                  "children": <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -1589,13 +1663,13 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>,
+                  </t>,
                   "tag": "div",
                 },
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "class",
                   "props": Object {
                     "accept": ".csv",
@@ -1624,7 +1698,7 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "host",
                       "props": Object {
                         "children": "Try dropping a file here, or click to select files to upload.",
@@ -1636,7 +1710,7 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "host",
                       "props": Object {
                         "children": "Only *.csv files will be accepted",
@@ -1659,7 +1733,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": "Current Time Reports",
@@ -1670,7 +1744,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
             "autoCollapse": Object {
@@ -1862,6 +1936,7 @@ ShallowWrapper {
               "expandColumnBeforeSelectColumn": true,
               "expandColumnComponent": undefined,
               "expandColumnVisible": false,
+              "expandedColumnHeaderComponent": undefined,
             },
             "expandComponent": undefined,
             "expandableRow": undefined,
@@ -1885,6 +1960,7 @@ ShallowWrapper {
             },
             "pagination": false,
             "printable": false,
+            "renderAlert": true,
             "replace": false,
             "scrollTop": undefined,
             "search": false,
@@ -1920,7 +1996,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Date",
@@ -1967,7 +2043,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Hours",
@@ -2014,7 +2090,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Employee",
@@ -2061,7 +2137,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Job",
@@ -2114,9 +2190,9 @@ ShallowWrapper {
     },
   ],
   Symbol(enzyme.__options__): Object {
-    "adapter": ReactFifteenAdapter {
+    "adapter": ReactSixteenAdapter {
       "options": Object {
-        "supportPrevContextArgumentOfComponentDidUpdate": true,
+        "enableComponentDidUpdateOnSetState": true,
       },
     },
   },
@@ -2128,9 +2204,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Timesheets
-    createTimesheetFailed={[Function]}
-    createTimesheetRequest={[Function]}
-    dismissError={[Function]}
+    createTimesheetFailed={[MockFunction]}
+    createTimesheetRequest={[MockFunction]}
+    dismissError={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -2141,7 +2217,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": null,
+    "key": undefined,
     "nodeType": "function",
     "props": Object {
       "children": Array [
@@ -2149,13 +2225,31 @@ ShallowWrapper {
           Input New Time Sheet
         </h3>,
         <Alert
+          closeAriaLabel="Close"
           color="danger"
           isOpen={false}
           tag="div"
-          toggle={[Function]}
-          transitionAppearTimeout={150}
-          transitionEnterTimeout={150}
-          transitionLeaveTimeout={150}
+          toggle={[MockFunction]}
+          transition={
+            Object {
+              "appear": true,
+              "baseClass": "fade",
+              "baseClassActive": "show",
+              "enter": true,
+              "exit": true,
+              "in": true,
+              "mountOnEnter": false,
+              "onEnter": [Function],
+              "onEntered": [Function],
+              "onEntering": [Function],
+              "onExit": [Function],
+              "onExited": [Function],
+              "onExiting": [Function],
+              "tag": "div",
+              "timeout": 150,
+              "unmountOnExit": true,
+            }
+          }
         >
           Error - 
         </Alert>,
@@ -2180,7 +2274,7 @@ ShallowWrapper {
               <FormGroup
                 tag="div"
               >
-                <Dropzone
+                <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -2201,7 +2295,7 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>
+                </t>
               </FormGroup>
             </Form>
           </Col>
@@ -2242,6 +2336,7 @@ ShallowWrapper {
               "expandColumnBeforeSelectColumn": true,
               "expandColumnComponent": undefined,
               "expandColumnVisible": false,
+              "expandedColumnHeaderComponent": undefined,
             }
           }
           expandComponent={undefined}
@@ -2270,6 +2365,7 @@ ShallowWrapper {
           }
           pagination={false}
           printable={false}
+          renderAlert={true}
           replace={false}
           scrollTop={undefined}
           search={false}
@@ -2473,7 +2569,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": "Input New Time Sheet",
@@ -2484,20 +2580,36 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "children": Array [
             "Error - ",
             null,
           ],
+          "closeAriaLabel": "Close",
           "color": "danger",
           "isOpen": false,
           "tag": "div",
-          "toggle": [Function],
-          "transitionAppearTimeout": 150,
-          "transitionEnterTimeout": 150,
-          "transitionLeaveTimeout": 150,
+          "toggle": [MockFunction],
+          "transition": Object {
+            "appear": true,
+            "baseClass": "fade",
+            "baseClassActive": "show",
+            "enter": true,
+            "exit": true,
+            "in": true,
+            "mountOnEnter": false,
+            "onEnter": [Function],
+            "onEntered": [Function],
+            "onEntering": [Function],
+            "onExit": [Function],
+            "onExited": [Function],
+            "onExiting": [Function],
+            "tag": "div",
+            "timeout": 150,
+            "unmountOnExit": true,
+          },
         },
         "ref": null,
         "rendered": Array [
@@ -2508,7 +2620,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "children": <Col
@@ -2529,7 +2641,7 @@ ShallowWrapper {
               <FormGroup
                 tag="div"
               >
-                <Dropzone
+                <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -2550,7 +2662,7 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>
+                </t>
               </FormGroup>
             </Form>
           </Col>,
@@ -2559,7 +2671,7 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": <Form
@@ -2568,7 +2680,7 @@ ShallowWrapper {
               <FormGroup
                 tag="div"
               >
-                <Dropzone
+                <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -2589,7 +2701,7 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>
+                </t>
               </FormGroup>
             </Form>,
             "tag": "div",
@@ -2604,13 +2716,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "function",
             "props": Object {
               "children": <FormGroup
                 tag="div"
               >
-                <Dropzone
+                <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -2631,17 +2743,17 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>
+                </t>
               </FormGroup>,
               "tag": "form",
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <Dropzone
+                "children": <t
                   accept=".csv"
                   disableClick={false}
                   disablePreview={false}
@@ -2662,13 +2774,13 @@ ShallowWrapper {
                   >
                     Only *.csv files will be accepted
                   </p>
-                </Dropzone>,
+                </t>,
                 "tag": "div",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "class",
                 "props": Object {
                   "accept": ".csv",
@@ -2697,7 +2809,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Try dropping a file here, or click to select files to upload.",
@@ -2709,7 +2821,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": null,
+                    "key": undefined,
                     "nodeType": "host",
                     "props": Object {
                       "children": "Only *.csv files will be accepted",
@@ -2732,7 +2844,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": "Current Time Reports",
@@ -2743,7 +2855,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "autoCollapse": Object {
@@ -2935,6 +3047,7 @@ ShallowWrapper {
             "expandColumnBeforeSelectColumn": true,
             "expandColumnComponent": undefined,
             "expandColumnVisible": false,
+            "expandedColumnHeaderComponent": undefined,
           },
           "expandComponent": undefined,
           "expandableRow": undefined,
@@ -2958,6 +3071,7 @@ ShallowWrapper {
           },
           "pagination": false,
           "printable": false,
+          "renderAlert": true,
           "replace": false,
           "scrollTop": undefined,
           "search": false,
@@ -2993,7 +3107,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Date",
@@ -3040,7 +3154,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Hours",
@@ -3087,7 +3201,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Employee",
@@ -3134,7 +3248,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "children": "Job",
@@ -3188,7 +3302,7 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": null,
+      "key": undefined,
       "nodeType": "function",
       "props": Object {
         "children": Array [
@@ -3196,13 +3310,31 @@ ShallowWrapper {
             Input New Time Sheet
           </h3>,
           <Alert
+            closeAriaLabel="Close"
             color="danger"
             isOpen={false}
             tag="div"
-            toggle={[Function]}
-            transitionAppearTimeout={150}
-            transitionEnterTimeout={150}
-            transitionLeaveTimeout={150}
+            toggle={[MockFunction]}
+            transition={
+              Object {
+                "appear": true,
+                "baseClass": "fade",
+                "baseClassActive": "show",
+                "enter": true,
+                "exit": true,
+                "in": true,
+                "mountOnEnter": false,
+                "onEnter": [Function],
+                "onEntered": [Function],
+                "onEntering": [Function],
+                "onExit": [Function],
+                "onExited": [Function],
+                "onExiting": [Function],
+                "tag": "div",
+                "timeout": 150,
+                "unmountOnExit": true,
+              }
+            }
           >
             Error - 
           </Alert>,
@@ -3227,7 +3359,7 @@ ShallowWrapper {
                 <FormGroup
                   tag="div"
                 >
-                  <Dropzone
+                  <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -3248,7 +3380,7 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>
+                  </t>
                 </FormGroup>
               </Form>
             </Col>
@@ -3289,6 +3421,7 @@ ShallowWrapper {
                 "expandColumnBeforeSelectColumn": true,
                 "expandColumnComponent": undefined,
                 "expandColumnVisible": false,
+                "expandedColumnHeaderComponent": undefined,
               }
             }
             expandComponent={undefined}
@@ -3317,6 +3450,7 @@ ShallowWrapper {
             }
             pagination={false}
             printable={false}
+            renderAlert={true}
             replace={false}
             scrollTop={undefined}
             search={false}
@@ -3520,7 +3654,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": "Input New Time Sheet",
@@ -3531,20 +3665,36 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": Array [
               "Error - ",
               null,
             ],
+            "closeAriaLabel": "Close",
             "color": "danger",
             "isOpen": false,
             "tag": "div",
-            "toggle": [Function],
-            "transitionAppearTimeout": 150,
-            "transitionEnterTimeout": 150,
-            "transitionLeaveTimeout": 150,
+            "toggle": [MockFunction],
+            "transition": Object {
+              "appear": true,
+              "baseClass": "fade",
+              "baseClassActive": "show",
+              "enter": true,
+              "exit": true,
+              "in": true,
+              "mountOnEnter": false,
+              "onEnter": [Function],
+              "onEntered": [Function],
+              "onEntering": [Function],
+              "onExit": [Function],
+              "onExited": [Function],
+              "onExiting": [Function],
+              "tag": "div",
+              "timeout": 150,
+              "unmountOnExit": true,
+            },
           },
           "ref": null,
           "rendered": Array [
@@ -3555,7 +3705,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "children": <Col
@@ -3576,7 +3726,7 @@ ShallowWrapper {
                 <FormGroup
                   tag="div"
                 >
-                  <Dropzone
+                  <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -3597,7 +3747,7 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>
+                  </t>
                 </FormGroup>
               </Form>
             </Col>,
@@ -3606,7 +3756,7 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": null,
+            "key": undefined,
             "nodeType": "function",
             "props": Object {
               "children": <Form
@@ -3615,7 +3765,7 @@ ShallowWrapper {
                 <FormGroup
                   tag="div"
                 >
-                  <Dropzone
+                  <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -3636,7 +3786,7 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>
+                  </t>
                 </FormGroup>
               </Form>,
               "tag": "div",
@@ -3651,13 +3801,13 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "function",
               "props": Object {
                 "children": <FormGroup
                   tag="div"
                 >
-                  <Dropzone
+                  <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -3678,17 +3828,17 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>
+                  </t>
                 </FormGroup>,
                 "tag": "form",
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": null,
+                "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": <Dropzone
+                  "children": <t
                     accept=".csv"
                     disableClick={false}
                     disablePreview={false}
@@ -3709,13 +3859,13 @@ ShallowWrapper {
                     >
                       Only *.csv files will be accepted
                     </p>
-                  </Dropzone>,
+                  </t>,
                   "tag": "div",
                 },
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
-                  "key": null,
+                  "key": undefined,
                   "nodeType": "class",
                   "props": Object {
                     "accept": ".csv",
@@ -3744,7 +3894,7 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "host",
                       "props": Object {
                         "children": "Try dropping a file here, or click to select files to upload.",
@@ -3756,7 +3906,7 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-                      "key": null,
+                      "key": undefined,
                       "nodeType": "host",
                       "props": Object {
                         "children": "Only *.csv files will be accepted",
@@ -3779,7 +3929,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": "Current Time Reports",
@@ -3790,7 +3940,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
             "autoCollapse": Object {
@@ -3982,6 +4132,7 @@ ShallowWrapper {
               "expandColumnBeforeSelectColumn": true,
               "expandColumnComponent": undefined,
               "expandColumnVisible": false,
+              "expandedColumnHeaderComponent": undefined,
             },
             "expandComponent": undefined,
             "expandableRow": undefined,
@@ -4005,6 +4156,7 @@ ShallowWrapper {
             },
             "pagination": false,
             "printable": false,
+            "renderAlert": true,
             "replace": false,
             "scrollTop": undefined,
             "search": false,
@@ -4040,7 +4192,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Date",
@@ -4087,7 +4239,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Hours",
@@ -4134,7 +4286,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Employee",
@@ -4181,7 +4333,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "children": "Job",
@@ -4234,9 +4386,9 @@ ShallowWrapper {
     },
   ],
   Symbol(enzyme.__options__): Object {
-    "adapter": ReactFifteenAdapter {
+    "adapter": ReactSixteenAdapter {
       "options": Object {
-        "supportPrevContextArgumentOfComponentDidUpdate": true,
+        "enableComponentDidUpdateOnSetState": true,
       },
     },
   },

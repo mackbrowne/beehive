@@ -15,7 +15,7 @@ describe("payroll methods", () => {
   });
 
   describe("payroll.fetchAll", () => {
-    it("runs normally", () => {
+    xit("runs normally", () => {
       const makeMoment = dateString =>
         moment(dateString, "DD/MM/YYYY").toDate();
       collection.find = jest.fn(props => {
