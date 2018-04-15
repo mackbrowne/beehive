@@ -10,12 +10,12 @@ import setSettingsValue from "../actionCreators/settings/setSettingsValue";
 import Settings from "../components/Settings";
 
 // Connect the STATE to the props fed into the component.
-export const mapStateToProps = (state) => {
+export const mapStateToProps = state => {
   return { settingsFields: state.settings };
 };
 
 // Connect ACTIONS to the props fed into the component.
-export const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = dispatch => {
   return bindActionCreators(
     { settingsSettingAction: setSettingsValue },
     dispatch
@@ -23,9 +23,8 @@ export const mapDispatchToProps = (dispatch) => {
 };
 
 // Create higher-order component which feeds in specified props.
-const SettingsContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Settings);
+const SettingsContainer = connect(mapStateToProps, mapDispatchToProps)(
+  Settings
+);
 
 export default SettingsContainer;

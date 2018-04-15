@@ -17,13 +17,7 @@ import {
  * @param {Object} props All the properties passed to the React Component.
  * @returns {Element} Stateless functional React component.
  */
-const BeeCard = ({
-  bee: { _id, type, name },
-  removeBee
-}
-
-
- )                     => {
+const BeeCard = ({ bee: { _id, type, name }, removeBee }) => {
   const remove = () => removeBee(_id);
 
   return (
@@ -35,13 +29,11 @@ const BeeCard = ({
         top
       />
       <CardBlock>
-        <CardTitle>
-          {name}
-        </CardTitle>
-        <CardSubtitle>
-          {type}
-        </CardSubtitle>
-        <Button color="danger" onClick={remove}>Delete</Button>
+        <CardTitle>{name}</CardTitle>
+        <CardSubtitle>{type}</CardSubtitle>
+        <Button color="danger" onClick={remove}>
+          Delete
+        </Button>
       </CardBlock>
     </Card>
   );

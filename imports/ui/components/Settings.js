@@ -6,30 +6,25 @@ import { Container, Row, Col } from "reactstrap";
 import FieldRows from "./FieldRows";
 
 /**
- * A list of Configuration options
+ * A list of settings.
  *
  * @param {Object} props All the properties passed to the React Component.
  * @returns {Element} Stateless functional React component.
  */
-const Config = ({
-  configFields = {},
-  configSettingAction
-}
-
-
- )                     =>
+const Settings = ({ settingsFields = {}, settingsSettingAction }) => (
   <aside>
-    <Container className="config" fluid>
-      <Row>
+    <Container className="settings" fluid>
+      <Row noGutters>
         <Col>
           <FieldRows
-            heading="Configuration"
-            fields={configFields}
-            stateSettingAction={configSettingAction}
+            heading="Settings"
+            fields={settingsFields}
+            stateSettingAction={settingsSettingAction}
           />
         </Col>
       </Row>
     </Container>
-  </aside>;
+  </aside>
+);
 
-export default Config;
+export default Settings;

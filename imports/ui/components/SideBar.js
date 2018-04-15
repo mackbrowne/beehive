@@ -9,15 +9,7 @@ import { Container, Row, Col, ButtonGroup, Button } from "reactstrap";
  * @param {Object} props All the properties passed to the React Component.
  * @returns {Element} Stateless functional React component.
  */
-const SideBar = ({
-  numberOfBees,
-  createBee,
-  removeAllBees
-}
-
-
-
- )                     => {
+const SideBar = ({ numberOfBees, createBee, removeAllBees }) => {
   const createBeeType = type => ({ type });
   const createWorker = () => createBee(createBeeType("Worker"));
   const createDrone = () => createBee(createBeeType("Drone"));

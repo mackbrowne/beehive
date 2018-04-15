@@ -12,13 +12,7 @@ import GameContainer from "../containers/GameContainer";
  * @param {Object} props All the properties passed to the React Component.
  * @returns {StatelessComponent} Stateless functional React component.
  */
-const Home = ({
-  toggleSideBar,
-  sideBarOpen
-}
-
-
- )                     =>
+const Home = ({ toggleSideBar, sideBarOpen }) => (
   <Container fluid>
     <Row>
       <Col>
@@ -26,14 +20,16 @@ const Home = ({
       </Col>
     </Row>
     <Row>
-      {sideBarOpen &&
+      {sideBarOpen && (
         <Col xs={12} sm={4} md={3}>
           <SideBarContainer />
-        </Col>}
+        </Col>
+      )}
       <Col>
         <GameContainer />
       </Col>
     </Row>
-  </Container>;
+  </Container>
+);
 
 export default Home;

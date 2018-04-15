@@ -22,7 +22,7 @@ const navigationItems = [
  *
  * @returns {Element} Stateless functional React component.
  */
-const AppLayout = ({ children }) =>
+const AppLayout = ({ children }) => (
   <Container className="app px-0" fluid>
     <Row className="bg-faded">
       <Col>
@@ -52,11 +52,13 @@ const AppLayout = ({ children }) =>
       <Col>
         <footer className="py-1 text-center">
           <p>
-            Created by: <a href="https://mackbrowne.com/">Mack Browne</a> and <a href="https://mackiedrew.com">Mackie Drew</a>
+            Created by: <a href="https://mackbrowne.com/">Mack Browne</a> and{" "}
+            <a href="https://mackiedrew.com">Mackie Drew</a>
           </p>
         </footer>
       </Col>
     </Row>
-  </Container>;
+  </Container>
+);
 
 export default AppLayout;

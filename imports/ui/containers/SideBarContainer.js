@@ -14,12 +14,12 @@ import getNumberOfBees from "../selectors/bees/getNumberOfBees";
 import SideBar from "../components/SideBar";
 
 // Connect the STATE to the props fed into the component.
-export const mapStateToProps = (state) => {
+export const mapStateToProps = state => {
   return { numberOfBees: getNumberOfBees(state) };
 };
 
 // Connect ACTIONS to the props fed into the component.
-export const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = dispatch => {
   return bindActionCreators(
     {
       createBee: createBeeRequest,
@@ -30,9 +30,6 @@ export const mapDispatchToProps = (dispatch) => {
 };
 
 // Create higher-order component which feeds in specified props.
-const SideBarContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SideBar);
+const SideBarContainer = connect(mapStateToProps, mapDispatchToProps)(SideBar);
 
 export default SideBarContainer;

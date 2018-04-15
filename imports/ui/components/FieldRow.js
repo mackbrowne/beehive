@@ -9,7 +9,6 @@ import { camelCaseToTitle } from "../helpers/text";
 
 // Types
 
-
 /**
  * A single input field for a boolean, string or number.
  *
@@ -21,17 +20,11 @@ const FieldRow = ({
   value,
   visibleLabel = true,
   stateSettingAction
-}
-
-
-
-
- )                     => {
-  const inputId         = `${label}-${typeof value}-field-row-input`;
-  const titleLabel         = camelCaseToTitle(label);
-  const labelClass         = visibleLabel ? "" : "sr-only";
-  const onChange                = ({ target: { value } }) =>
-    stateSettingAction(label, value);
+}) => {
+  const inputId = `${label}-${typeof value}-field-row-input`;
+  const titleLabel = camelCaseToTitle(label);
+  const labelClass = visibleLabel ? "" : "sr-only";
+  const onChange = ({ target: { value } }) => stateSettingAction(label, value);
   return (
     <FormGroup className="field-row">
       <Label className={labelClass} for={inputId}>
