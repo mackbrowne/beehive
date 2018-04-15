@@ -118,6 +118,16 @@ exports[`<AppLayout /> AppLayout SnapShot renders config correctly with default 
           >
             Mack Browne
           </a>
+<<<<<<< HEAD
+=======
+           and
+           
+          <a
+            href="https://mackiedrew.com"
+          >
+            Mackie Drew
+          </a>
+>>>>>>> master
         </p>
       </footer>
     </div>

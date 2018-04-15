@@ -1,6 +1,7 @@
 // Libraries
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
+import { routerMiddleware } from "react-router-redux";
 
 // Reducers
 import rootReducer from "./rootReducer";
@@ -31,8 +32,9 @@ export const registerSagas = (sagaMiddleware, sagas) =>
 export const configureStore = initialState => {
   // Create saga middleware
   const sagaMiddleware = createSagaMiddleware();
+  const routeMiddleware = routerMiddleware(history);
   // Create a function that can apply the saga middleware to a StoreCreator
-  const sagaStoreEnhancer = applyMiddleware(sagaMiddleware);
+  const sagaStoreEnhancer = applyMiddleware(sagaMiddleware, routeMiddleware);
   // Create a function that can create a store with the new middleware
   const createStoreWithMiddleWare = sagaStoreEnhancer(createStore);
   // Determine whether debug mode should be attached

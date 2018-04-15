@@ -17,12 +17,14 @@
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.44",
     "bootstrap": "4.1.0",
+    "history": "^4.7.2",
     "meteor-node-stubs": "0.3.3",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-redux": "5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.8",
     "reactstrap": "^5.0.0-beta.3",
     "csv": "^1.1.1",
     "moment": "^2.19.1",
@@ -35,6 +37,7 @@
     "request": "^2.85.0",
     "reselect": "3.0.1",
     "simpl-schema": "1.5.0",
+    "styled-components": "^3.2.5",
     "underscore": "1.8.3"
   },
   "devDependencies": {
@@ -49,21 +52,21 @@
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "4.19.1",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-prettier": "2.6.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "7.7.0",
     "husky": "0.14.3",
     "jest": "22.4.3",
     "jest-css-modules": "^1.1.0",
     "jest-meteor-stubs": "github:mackbrowne/jest-meteor-stubs#master",
     "lint-staged": "^5.0.0",
-    "prettier": "1.12.0",
+    "prettier": "^1.12.0",
     "react-test-renderer": "^16.3.1",
     "redux-devtools": "3.4.1",
     "redux-saga-test-plan": "^3.2.0"
   },
   "lint-staged": {
-    "**/*.{js,jsx}": [
+    "**/*.js": [
       "./node_modules/.bin/eslint --fix",
       "git add"
     ]
@@ -73,12 +76,11 @@
       "<rootDir>/tests/jestSetup.js"
     ],
     "transform": {
-      "^.+\\.(js|jsx)?$": "babel-jest",
+      "^.+\\.js?$": "babel-jest",
       "^.+\\.(css|scss|less)$": "jest-css-modules"
     },
     "moduleFileExtensions": [
-      "js",
-      "jsx"
+      "js"
     ],
     "modulePaths": [
       "<rootDir>/node_modules/"
@@ -89,14 +91,12 @@
     },
     "unmockedModulePathPatterns": [
       "/^imports\\/.*\\.js?$/",
-      "/^imports\\/.*\\.jsx?$/",
       "/^node_modules/"
     ],
     "collectCoverage": true,
     "coverageDirectory": ".coverage",
     "collectCoverageFrom": [
-      "imports/**/*.js",
-      "imports/**/*.jsx"
+      "imports/**/*.js"
     ],
     "coverageReporters": [
       "lcov",

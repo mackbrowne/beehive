@@ -22,7 +22,7 @@ const navigationItems = [
  *
  * @returns {Element} Stateless functional React component.
  */
-const AppLayout = ({ children }) =>
+const AppLayout = ({ children }) => (
   <Container className="app px-0" fluid>
     <Row className="bg-faded">
       <Col>
@@ -57,6 +57,7 @@ const AppLayout = ({ children }) =>
         </footer>
       </Col>
     </Row>
-  </Container>;
+  </Container>
+);
 
 export default AppLayout;
