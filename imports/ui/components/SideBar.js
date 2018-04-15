@@ -1,27 +1,19 @@
 // Framework
-import React from "react";
+import React from 'react';
 
 // Components
-import { Container, Row, Col, ButtonGroup, Button } from "reactstrap";
+import { Container, Row, Col, ButtonGroup, Button } from 'reactstrap';
 /**
  * A list of field rows with a header.
  *
  * @param {Object} props All the properties passed to the React Component.
  * @returns {Element} Stateless functional React component.
  */
-const SideBar = ({
-  numberOfBees,
-  createBee,
-  removeAllBees
-}
-
-
-
- )                     => {
+const SideBar = ({ numberOfBees, createBee, removeAllBees }) => {
   const createBeeType = type => ({ type });
-  const createWorker = () => createBee(createBeeType("Worker"));
-  const createDrone = () => createBee(createBeeType("Drone"));
-  const createQueen = () => createBee(createBeeType("Queen"));
+  const createWorker = () => createBee(createBeeType('Worker'));
+  const createDrone = () => createBee(createBeeType('Drone'));
+  const createQueen = () => createBee(createBeeType('Queen'));
   const removeBees = () => removeAllBees();
 
   return (

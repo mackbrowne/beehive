@@ -1,1 +1,1 @@
-import "./registerApis";
+import './registerApis';

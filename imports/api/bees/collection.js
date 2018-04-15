@@ -1,7 +1,7 @@
 // Framework
-import { Meteor } from "meteor/meteor";
-import { Mongo } from "meteor/mongo";
-import SimpleSchema from "simpl-schema";
+import { Meteor } from 'meteor/meteor';
+import { Mongo } from 'meteor/mongo';
+import SimpleSchema from 'simpl-schema';
 
 class BeesCollection extends Mongo.Collection {
   insert(bee, callback) {
@@ -19,6 +19,6 @@ class BeesCollection extends Mongo.Collection {
   }
 }
 
-export const Bees = new BeesCollection("Bees");
+export const Bees = new BeesCollection('Bees');
 
 export default Bees;

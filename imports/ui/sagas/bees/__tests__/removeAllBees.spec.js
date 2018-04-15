@@ -1,24 +1,24 @@
 // Testing
-import { Meteor } from "meteor/meteor";
-import { testSaga, expectSaga } from "redux-saga-test-plan";
-import * as matchers from "redux-saga-test-plan/matchers";
-import { throwError } from "redux-saga-test-plan/providers";
+import { Meteor } from 'meteor/meteor';
+import { testSaga, expectSaga } from 'redux-saga-test-plan';
+import * as matchers from 'redux-saga-test-plan/matchers';
+import { throwError } from 'redux-saga-test-plan/providers';
 
-import { removeAllBeesWorker, removeAllBeesWatcher } from "../removeAllBees";
+import { removeAllBeesWorker, removeAllBeesWatcher } from '../removeAllBees';
 
 // Action Types
-import { REMOVE_ALL_BEES_REQUEST } from "../../../actionTypes/bees";
+import { REMOVE_ALL_BEES_REQUEST } from '../../../actionTypes/bees';
 
 // Action Creators
-import removeAllBeesFailed from "../../../actionCreators/bees/removeAllBeesFailed";
-import removeAllBeesSuccessful from "../../../actionCreators/bees/removeAllBeesSuccessful";
-import fetchBeesRequest from "../../../actionCreators/bees/fetchBeesRequest";
+import removeAllBeesFailed from '../../../actionCreators/bees/removeAllBeesFailed';
+import removeAllBeesSuccessful from '../../../actionCreators/bees/removeAllBeesSuccessful';
+import fetchBeesRequest from '../../../actionCreators/bees/fetchBeesRequest';
 
-describe("FetchBees Worker", () => {
-  it("works normally", () => {
+describe('FetchBees Worker', () => {
+  it('works normally', () => {
     testSaga(removeAllBeesWorker)
       .next()
-      .call(Meteor.callPromise, "bees.removeAllForUser")
+      .call(Meteor.callPromise, 'bees.removeAllForUser')
       .next()
       .put(removeAllBeesSuccessful())
       .next()
@@ -27,8 +27,8 @@ describe("FetchBees Worker", () => {
       .isDone();
   });
 
-  it("api fails", () => {
-    const error = new Meteor.Error("random error");
+  it('api fails', () => {
+    const error = new Meteor.Error('random error');
     const provider = [
       [matchers.call.fn(Meteor.callPromise), throwError(error)]
     ];
@@ -40,8 +40,8 @@ describe("FetchBees Worker", () => {
   });
 });
 
-describe("CreateBee Watcher", () => {
-  it("works normally", () => {
+describe('CreateBee Watcher', () => {
+  it('works normally', () => {
     testSaga(removeAllBeesWatcher)
       .next()
       .takeLatestEffect(REMOVE_ALL_BEES_REQUEST, removeAllBeesWorker)

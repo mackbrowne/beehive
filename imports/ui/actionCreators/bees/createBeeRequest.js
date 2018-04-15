@@ -1,5 +1,5 @@
 // Actoon Types
-import { CREATE_BEE_REQUEST } from "../../actionTypes/bees";
+import { CREATE_BEE_REQUEST } from '../../actionTypes/bees';
 
 // Action Creator
 export const createBeeRequest = beePrototype => ({

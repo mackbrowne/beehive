@@ -1,6 +1,6 @@
 // Framework
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 /**
  * A single navigation item.
@@ -8,15 +8,10 @@ import { Link } from "react-router-dom";
  * @param {Object} props All the properties passed to the React Component.
  * @returns {Element} Stateless functional React component.
  */
-const NavigationItem = ({
-  label = "Home",
-  path = "/"
-}
-
-
- )                     =>
+const NavigationItem = ({ label = 'Home', path = '/' }) => (
   <Link className="navigation-item" to={path}>
     {label}
-  </Link>;
+  </Link>
+);
 
 export default NavigationItem;

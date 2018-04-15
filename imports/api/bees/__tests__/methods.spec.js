@@ -1,8 +1,8 @@
 //import { Factory } from 'meteor/dburles:factory';
 //import { PublicationCollector } from 'meteor/johanbrook:publication-collector';
-import { Meteor } from "meteor/meteor";
-import { Mongo } from "meteor/mongo";
-import { ValidatedMethod } from "meteor/mdg:validated-method";
+import { Meteor } from 'meteor/meteor';
+import { Mongo } from 'meteor/mongo';
+import { ValidatedMethod } from 'meteor/mdg:validated-method';
 //import { _ } from 'meteor/underscore';
 //import { Bees } from '../collection';
 import {
@@ -11,37 +11,37 @@ import {
   updateName,
   remove,
   removeAllForUser
-} from "../methods";
+} from '../methods';
 
-describe("bee methods", function() {
+describe('bee methods', function() {
   let collection;
   beforeEach(() => {
     collection = Mongo.Collection.prototype;
   });
 
-  describe("bees.fetchAllForUser", () => {
-    it("runs normally", () => {
+  describe('bees.fetchAllForUser', () => {
+    it('runs normally', () => {
       const result = fetchAllForUser.run();
       expect(collection.find).toHaveBeenCalled();
     });
   });
 
-  describe("bees.insert", () => {
+  describe('bees.insert', () => {
     let bee;
     beforeEach(() => {
       bee = {
-        name: "Bee1",
-        type: "Worker"
+        name: 'Bee1',
+        type: 'Worker'
       };
     });
 
-    it("runs normally", () => {
+    it('runs normally', () => {
       const result = insert.run(bee);
       expect(collection.insert).toHaveBeenCalled();
     });
 
-    it("runs the error case", () => {
-      const error = Meteor.Error("Insert Error");
+    it('runs the error case', () => {
+      const error = Meteor.Error('Insert Error');
       collection.insert = jest.fn(bee => {
         throw error;
       });
@@ -49,22 +49,22 @@ describe("bee methods", function() {
         insert.run(bee);
       }).toThrow(
         Meteor.Error(
-          "api.bees.insert.unspecifiedError",
-          "Could not insert a new bee.",
+          'api.bees.insert.unspecifiedError',
+          'Could not insert a new bee.',
           error
         )
       );
     });
   });
 
-  describe("bees.updateName", () => {
+  describe('bees.updateName', () => {
     let beeId, newName;
     beforeEach(() => {
-      beeId = "asdf1234";
-      newName = "newName";
+      beeId = 'asdf1234';
+      newName = 'newName';
     });
 
-    it("runs normally", () => {
+    it('runs normally', () => {
       const result = updateName.run({ beeId, newName });
       expect(collection.findOne).toHaveBeenCalledWith(beeId);
 
@@ -75,13 +75,13 @@ describe("bee methods", function() {
     //TODO throws error
   });
 
-  describe("bees.remove", () => {
+  describe('bees.remove', () => {
     let beeId;
     beforeEach(() => {
-      beeId = "asdf1234";
+      beeId = 'asdf1234';
     });
 
-    it("runs normally", () => {
+    it('runs normally', () => {
       const result = remove.run({ beeId });
       expect(collection.findOne).toHaveBeenCalledWith(beeId);
       expect(collection.remove).toHaveBeenCalledWith(beeId);
@@ -90,8 +90,8 @@ describe("bee methods", function() {
     //TODO throws error
   });
 
-  describe("bees.removeAllForUser", () => {
-    it("runs normally", () => {
+  describe('bees.removeAllForUser', () => {
+    it('runs normally', () => {
       const result = removeAllForUser.run();
       expect(collection.remove).toHaveBeenCalledWith({});
     });

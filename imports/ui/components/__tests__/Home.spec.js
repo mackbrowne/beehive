@@ -1,12 +1,12 @@
-import React from "react";
-import ReactTestRenderer from "react-test-renderer";
-import { shallow } from "enzyme";
+import React from 'react';
+import ReactTestRenderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
-import Home from "../Home";
+import Home from '../Home';
 
-import { Button } from "reactstrap";
+import { Button } from 'reactstrap';
 
-describe("<Home />", () => {
+describe('<Home />', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
@@ -15,7 +15,7 @@ describe("<Home />", () => {
     };
   });
 
-  describe("Home Props", () => {
+  describe('Home Props', () => {
     let button;
 
     beforeEach(() => {
@@ -23,8 +23,8 @@ describe("<Home />", () => {
       button = wrapper.find(Button);
     });
 
-    it("should call toggleSideBar", () => {
-      button.simulate("click");
+    it('should call toggleSideBar', () => {
+      button.simulate('click');
       expect(defaultProps.toggleSideBar).toHaveBeenCalled();
     });
   });

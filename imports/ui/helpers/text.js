@@ -12,6 +12,6 @@ export const camelCaseToTitle = (camelCase: string): string => {
   const camelCaseWordRegex = /^[a-z]+|[A-Z][a-z]*/g;
   const words = camelCase.match(camelCaseWordRegex);
   const capitalizedWords: Array<string> = capitalizeWords(words);
-  const title: string = capitalizedWords.join(" ");
+  const title: string = capitalizedWords.join(' ');
   return title;
 };

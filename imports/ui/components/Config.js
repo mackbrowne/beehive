@@ -1,9 +1,9 @@
 // Framework
-import React from "react";
+import React from 'react';
 
 // Components
-import { Container, Row, Col } from "reactstrap";
-import FieldRows from "./FieldRows";
+import { Container, Row, Col } from 'reactstrap';
+import FieldRows from './FieldRows';
 
 /**
  * A list of Configuration options
@@ -11,13 +11,7 @@ import FieldRows from "./FieldRows";
  * @param {Object} props All the properties passed to the React Component.
  * @returns {Element} Stateless functional React component.
  */
-const Config = ({
-  configFields = {},
-  configSettingAction
-}
-
-
- )                     =>
+const Config = ({ configFields = {}, configSettingAction }) => (
   <aside>
     <Container className="config" fluid>
       <Row>
@@ -30,6 +24,7 @@ const Config = ({
         </Col>
       </Row>
     </Container>
-  </aside>;
+  </aside>
+);
 
 export default Config;

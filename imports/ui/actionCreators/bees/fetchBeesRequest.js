@@ -1,5 +1,5 @@
 // Action Types
-import { FETCH_BEES_REQUEST } from "../../actionTypes/bees";
+import { FETCH_BEES_REQUEST } from '../../actionTypes/bees';
 
 // Action Creator
 export const fetchBeesRequest = bees => ({

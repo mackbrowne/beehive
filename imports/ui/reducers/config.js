@@ -1,5 +1,5 @@
 // Action Types
-import { SET_CONFIG_VALUE } from "../actionTypes/config";
+import { SET_CONFIG_VALUE } from '../actionTypes/config';
 
 // Default State
 export const DEFAULT_STATE = {

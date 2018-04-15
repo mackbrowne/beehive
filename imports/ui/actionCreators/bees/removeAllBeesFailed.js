@@ -1,5 +1,5 @@
 // Action Types
-import { REMOVE_ALL_BEES_FAILED } from "../../actionTypes/bees";
+import { REMOVE_ALL_BEES_FAILED } from '../../actionTypes/bees';
 
 // Action Creator
 export const removeAllBeesFailed = error => ({

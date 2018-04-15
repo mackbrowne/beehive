@@ -1,5 +1,5 @@
 // Action Types
-import { REMOVE_BEE_SUCCESSFUL } from "../../actionTypes/bees";
+import { REMOVE_BEE_SUCCESSFUL } from '../../actionTypes/bees';
 
 // Action Creator
 export const removeBeeSuccessful = () => ({

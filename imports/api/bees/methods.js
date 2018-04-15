@@ -1,17 +1,17 @@
 // Framework
-import { Meteor } from "meteor/meteor";
-import SimpleSchema from "simpl-schema";
-import { ValidatedMethod } from "meteor/mdg:validated-method";
-import { DDPRateLimiter } from "meteor/ddp-rate-limiter";
+import { Meteor } from 'meteor/meteor';
+import SimpleSchema from 'simpl-schema';
+import { ValidatedMethod } from 'meteor/mdg:validated-method';
+import { DDPRateLimiter } from 'meteor/ddp-rate-limiter';
 
 // Libraries
-import _ from "underscore";
+import _ from 'underscore';
 
 // Collections
-import { Bees } from "./collection";
+import { Bees } from './collection';
 
 export const fetchAllForUser = new ValidatedMethod({
-  name: "bees.fetchAllForUser",
+  name: 'bees.fetchAllForUser',
   validate: null,
   run() {
     const allBeesForUserCursor = Bees.find({ userId: this.userId });
@@ -21,7 +21,7 @@ export const fetchAllForUser = new ValidatedMethod({
 });
 
 export const insert = new ValidatedMethod({
-  name: "bees.insert",
+  name: 'bees.insert',
   validate: null,
   run({ bee }) {
     try {
@@ -33,8 +33,8 @@ export const insert = new ValidatedMethod({
       return result;
     } catch (error) {
       const newError = new Meteor.Error(
-        "api.bees.insert.unspecifiedError",
-        "Could not insert a new bee.",
+        'api.bees.insert.unspecifiedError',
+        'Could not insert a new bee.',
         error
       );
       console.error(newError);
@@ -44,7 +44,7 @@ export const insert = new ValidatedMethod({
 });
 
 export const updateName = new ValidatedMethod({
-  name: "bees.updateName",
+  name: 'bees.updateName',
   validate: new SimpleSchema({
     beeId: { type: String },
     newName: { type: String }
@@ -55,7 +55,7 @@ export const updateName = new ValidatedMethod({
     //TODO: fix hack, unsuccessful add editableBy function through collection.js
     if (false && !bee.editableBy(this.userId)) {
       throw new Meteor.Error(
-        "api.bees.updateName.accessDenied",
+        'api.bees.updateName.accessDenied',
         "You don't have permission to edit this bee."
       );
     }
@@ -67,7 +67,7 @@ export const updateName = new ValidatedMethod({
 });
 
 export const remove = new ValidatedMethod({
-  name: "bees.remove",
+  name: 'bees.remove',
   validate: new SimpleSchema({
     beeId: { type: String }
   }).validator(),
@@ -77,7 +77,7 @@ export const remove = new ValidatedMethod({
     //TODO: fix hack, unsuccessful add editableBy function through collection.js
     if (false && !bee.editableBy(this.userId)) {
       throw new Meteor.Error(
-        "api.bees.remove.accessDenied",
+        'api.bees.remove.accessDenied',
         "You don't have permission to remove this bee."
       );
     }
@@ -87,7 +87,7 @@ export const remove = new ValidatedMethod({
 });
 
 export const removeAllForUser = new ValidatedMethod({
-  name: "bees.removeAllForUser",
+  name: 'bees.removeAllForUser',
   validate: null,
   run() {
     return Bees.remove({ userId: this.userId });
@@ -96,7 +96,7 @@ export const removeAllForUser = new ValidatedMethod({
 
 const BEES_METHODS = _.pluck(
   [insert, updateName, remove, removeAllForUser, fetchAllForUser],
-  "name"
+  'name'
 );
 
 if (Meteor.isServer) {

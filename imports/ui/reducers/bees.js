@@ -12,7 +12,7 @@ import {
   REMOVE_ALL_BEES_REQUEST,
   REMOVE_ALL_BEES_SUCCESSFUL,
   REMOVE_ALL_BEES_FAILED
-} from "../actionTypes/bees";
+} from '../actionTypes/bees';
 
 // Default State
 export const DEFAULT_STATE = {

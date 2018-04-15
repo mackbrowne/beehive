@@ -1,5 +1,5 @@
 // Action Types
-import { INIT } from "../../actionTypes/generic";
+import { INIT } from '../../actionTypes/generic';
 
 // Action Creator
 export const initAppRequest = () => ({

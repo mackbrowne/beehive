@@ -1,5 +1,5 @@
 // Actoon Types
-import { BEES_REQUEST_FAILED } from "../../actionTypes/bees";
+import { BEES_REQUEST_FAILED } from '../../actionTypes/bees';
 
 // Action Creator
 const beesRequestFailed = error => {

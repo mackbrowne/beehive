@@ -1,5 +1,5 @@
 // Action Types
-import { SET_SETTINGS_VALUE } from "../../actionTypes/settings";
+import { SET_SETTINGS_VALUE } from '../../actionTypes/settings';
 
 // Action Creator
 export const setSettingValue = (

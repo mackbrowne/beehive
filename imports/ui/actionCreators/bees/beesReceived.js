@@ -1,5 +1,5 @@
 // Actoon Types
-import { BEES_RECEIVED } from "../../actionTypes/bees";
+import { BEES_RECEIVED } from '../../actionTypes/bees';
 
 // Action Creator
 export const beesReceived = bees => {

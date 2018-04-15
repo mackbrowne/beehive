@@ -1,20 +1,20 @@
-import React from "react";
-import ReactTestRenderer from "react-test-renderer";
+import React from 'react';
+import ReactTestRenderer from 'react-test-renderer';
 
-import Game from "../Game";
+import Game from '../Game';
 
-describe("<Game />", () => {
+describe('<Game />', () => {
   let defaultProps;
 
-  describe("Game SnapShot", () => {
+  describe('Game SnapShot', () => {
     beforeEach(() => {
       defaultProps = {
-        bees: [{ _id: 123, name: "testBee", type: "worker" }],
+        bees: [{ _id: 123, name: 'testBee', type: 'worker' }],
         removeBee: jest.fn()
       };
     });
 
-    it("renders game with no bees correctly", () => {
+    it('renders game with no bees correctly', () => {
       delete defaultProps.bees;
       const tree = ReactTestRenderer.create(
         <Game {...defaultProps} />
@@ -22,7 +22,7 @@ describe("<Game />", () => {
       expect(tree).toMatchSnapshot();
     });
 
-    it("renders game with bees correctly", () => {
+    it('renders game with bees correctly', () => {
       const tree = ReactTestRenderer.create(
         <Game {...defaultProps} />
       ).toJSON();

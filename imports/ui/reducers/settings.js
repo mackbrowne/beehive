@@ -1,9 +1,9 @@
 // Action Types
-import { SET_SETTINGS_VALUE } from "../actionTypes/settings";
+import { SET_SETTINGS_VALUE } from '../actionTypes/settings';
 
 // Default State
 export const DEFAULT_STATE = {
-  hiveName: "Your Beehive"
+  hiveName: 'Your Beehive'
 };
 
 // Reducer

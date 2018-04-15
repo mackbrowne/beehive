@@ -1,5 +1,5 @@
 // Action Types
-import { REMOVE_ALL_BEES_REQUEST } from "../../actionTypes/bees";
+import { REMOVE_ALL_BEES_REQUEST } from '../../actionTypes/bees';
 
 // Action Creator
 export const removeAllBeesRequest = () => ({

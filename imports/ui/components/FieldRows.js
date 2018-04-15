@@ -1,9 +1,9 @@
 // Framework
-import React from "react";
+import React from 'react';
 
 // Components
-import { Container, Row, Col, Form } from "reactstrap";
-import FieldRow from "./FieldRow";
+import { Container, Row, Col, Form } from 'reactstrap';
+import FieldRow from './FieldRow';
 
 /**
  * A list of field rows with a header.
@@ -11,27 +11,17 @@ import FieldRow from "./FieldRow";
  * @param {Object} props All the properties passed to the React Component.
  * @returns {Element} Stateless functional React component.
  */
-const FieldRows = ({
-  heading = "Fields",
-  fields = {},
-  stateSettingAction
-}
-
-
-
- )                     =>
+const FieldRows = ({ heading = 'Fields', fields = {}, stateSettingAction }) => (
   <Container className="field-rows px-0" fluid>
     <Row noGutters>
       <Col>
-        <h3>
-          {heading}
-        </h3>
+        <h3>{heading}</h3>
       </Col>
     </Row>
     <Row noGutters>
       <Col>
         <Form>
-          {Object.keys(fields).map((label, i) =>
+          {Object.keys(fields).map((label, i) => (
             <FieldRow
               key={i}
               label={label}
@@ -39,10 +29,11 @@ const FieldRows = ({
               stateSettingAction={stateSettingAction}
               visibleLabel
             />
-          )}
+          ))}
         </Form>
       </Col>
     </Row>
-  </Container>;
+  </Container>
+);
 
 export default FieldRows;

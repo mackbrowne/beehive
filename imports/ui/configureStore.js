@@ -1,17 +1,17 @@
 // Libraries
-import { createStore, applyMiddleware } from "redux";
-import createSagaMiddleware from "redux-saga";
-import { routerMiddleware } from "react-router-redux";
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import { routerMiddleware } from 'react-router-redux';
 
 // Reducers
-import rootReducer from "./rootReducer";
+import rootReducer from './rootReducer';
 
 // Sagas
-import initSaga from "./sagas/init";
-import createBeeSaga from "./sagas/bees/createBee";
-import fetchBeesSaga from "./sagas/bees/fetchBees";
-import removeAllBeesSaga from "./sagas/bees/removeAllBees";
-import removeBeeSaga from "./sagas/bees/removeBee";
+import initSaga from './sagas/init';
+import createBeeSaga from './sagas/bees/createBee';
+import fetchBeesSaga from './sagas/bees/fetchBees';
+import removeAllBeesSaga from './sagas/bees/removeAllBees';
+import removeBeeSaga from './sagas/bees/removeBee';
 
 export const combinedSagas = () => [
   initSaga,
@@ -44,7 +44,7 @@ export const configureStore = initialState => {
   if (Meteor.isDevelopment) {
     const reduxDevTools = window.__REDUX_DEVTOOLS_EXTENSION__;
     const debug =
-      typeof reduxDevTools === "function" ? reduxDevTools() : a => a;
+      typeof reduxDevTools === 'function' ? reduxDevTools() : a => a;
     // Actually create the store with the new middleware
     store = createStoreWithMiddleWare(rootReducer, initialState, debug);
   } else {

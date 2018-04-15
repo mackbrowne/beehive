@@ -1,12 +1,12 @@
-import React from "react";
-import { MemoryRouter } from "react-router-dom";
+import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 
-import ReactTestRenderer from "react-test-renderer";
-import { shallow } from "enzyme";
+import ReactTestRenderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
-import AppLayout from "../AppLayout";
+import AppLayout from '../AppLayout';
 
-describe("<AppLayout />", () => {
+describe('<AppLayout />', () => {
   let defaultProps;
 
   beforeEach(() => {
@@ -15,11 +15,11 @@ describe("<AppLayout />", () => {
     };
   });
 
-  describe("AppLayout SnapShot", () => {
-    it("renders config correctly with default props", () => {
+  describe('AppLayout SnapShot', () => {
+    it('renders config correctly with default props', () => {
       delete defaultProps.configFields;
       const tree = ReactTestRenderer.create(
-        <MemoryRouter initialEntries={["/home"]}>
+        <MemoryRouter initialEntries={['/home']}>
           <AppLayout {...defaultProps} />
         </MemoryRouter>
       ).toJSON();

@@ -1,20 +1,20 @@
 // Framework
-import React from "react";
-import { Meteor } from "meteor/meteor";
-import { render } from "react-dom";
-import { Provider } from "react-redux";
-import createHistory from "history/createBrowserHistory";
-import { ConnectedRouter } from "react-router-redux";
+import React from 'react';
+import { Meteor } from 'meteor/meteor';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import createHistory from 'history/createBrowserHistory';
+import { ConnectedRouter } from 'react-router-redux';
 
 // Libraries
-import "bootstrap/dist/css/bootstrap.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 // Client Imports
-import AppLayout from "../../ui/layouts/AppLayout";
-import configureStore from "../../ui/configureStore";
+import AppLayout from '../../ui/layouts/AppLayout';
+import configureStore from '../../ui/configureStore';
 
 // Initial Actions
-import initAppRequest from "../../ui/actionCreators/generic/init";
+import initAppRequest from '../../ui/actionCreators/generic/init';
 
 const history = createHistory();
 
@@ -29,7 +29,7 @@ const renderApp = () =>
         <AppLayout />
       </ConnectedRouter>
     </Provider>,
-    document.getElementById("render-target")
+    document.getElementById('render-target')
   );
 
 // Start App

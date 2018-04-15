@@ -1,10 +1,10 @@
-import React from "react";
-import ReactTestUtils from "react-dom/test-utils";
+import React from 'react';
+import ReactTestUtils from 'react-dom/test-utils';
 
-import ReactTestRenderer from "react-test-renderer";
-import ReactShallowRenderer from "react-test-renderer/shallow";
+import ReactTestRenderer from 'react-test-renderer';
+import ReactShallowRenderer from 'react-test-renderer/shallow';
 
-import BeeCard from "../BeeCard";
+import BeeCard from '../BeeCard';
 
 import {
   Card,
@@ -13,19 +13,19 @@ import {
   CardTitle,
   CardSubtitle,
   Button
-} from "reactstrap";
+} from 'reactstrap';
 
-describe("BeeCard", () => {
+describe('BeeCard', () => {
   let instance;
   let cardImg, cardBlock;
   let cardTitle, cardSubtitle, deleteButton;
   const renderer = new ReactShallowRenderer();
 
-  let bee = { _id: "testID", name: "test bee", type: "test type" };
+  let bee = { _id: 'testID', name: 'test bee', type: 'test type' };
   let removeBee = jest.fn();
 
-  describe("BeeCard SnapShot", () => {
-    it("renders BeeCard correctly", () => {
+  describe('BeeCard SnapShot', () => {
+    it('renders BeeCard correctly', () => {
       const tree = ReactTestRenderer.create(
         <BeeCard bee={bee} removeBee={removeBee} />
       ).toJSON();
@@ -33,7 +33,7 @@ describe("BeeCard", () => {
     });
   });
 
-  describe("when bee is a worker", () => {
+  describe('when bee is a worker', () => {
     beforeEach(() => {
       renderer.render(<BeeCard bee={bee} removeBee={removeBee} />);
       instance = renderer.getRenderOutput();
@@ -42,7 +42,7 @@ describe("BeeCard", () => {
       [cardTitle, cardSubtitle, deleteButton] = cardBlock.props.children;
     });
 
-    it("checks rendering of CardImg", () => {
+    it('checks rendering of CardImg', () => {
       const {
         type,
         props: { src, alt }
@@ -52,7 +52,7 @@ describe("BeeCard", () => {
       expect(alt).toBe(`${bee.type} Bee`);
     });
 
-    it("checks rendering of CardTitle", () => {
+    it('checks rendering of CardTitle', () => {
       const {
         type,
         props: { children }
@@ -61,7 +61,7 @@ describe("BeeCard", () => {
       expect(children).toBe(bee.name);
     });
 
-    it("checks rendering of CardSubtitle", () => {
+    it('checks rendering of CardSubtitle', () => {
       const {
         type,
         props: { children }
@@ -70,7 +70,7 @@ describe("BeeCard", () => {
       expect(children).toBe(bee.type);
     });
 
-    it("checks to see if the deleteButton calls removeBee", () => {
+    it('checks to see if the deleteButton calls removeBee', () => {
       deleteButton.props.onClick();
       expect(removeBee).toHaveBeenCalled();
     });
