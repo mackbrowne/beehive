@@ -3,7 +3,7 @@ import ReactTestRenderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
 import SideBar from '../SideBar';
-import { Button } from 'reactstrap';
+import { GameButton, QuitButton } from '../SideBar.style';
 
 describe('<SideBar />', () => {
   const defaultProps = {
@@ -22,24 +22,23 @@ describe('<SideBar />', () => {
   });
 
   describe('SideBar Props', () => {
-    let wrapper, buttons;
+    let wrapper, buttons, xbutton;
 
     beforeEach(() => {
       const wrapper = shallow(<SideBar {...defaultProps} />);
-      buttons = wrapper.find(Button);
+      buttons = wrapper.find(GameButton);
+      xbutton = wrapper.find(QuitButton).first();
     });
 
     it('should call createBee', () => {
       buttons.forEach((node, index) => {
-        if (index < buttons.length - 1) {
-          node.simulate('click');
-        }
+        node.simulate('click');
       });
       expect(defaultProps.createBee).toHaveBeenCalledTimes(3);
     });
 
     it('should call removeAllBees', () => {
-      buttons.last().simulate('click');
+      xbutton.simulate('click');
       expect(defaultProps.removeAllBees).toHaveBeenCalled();
     });
   });

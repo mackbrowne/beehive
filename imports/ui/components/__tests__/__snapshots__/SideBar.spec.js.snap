@@ -16,28 +16,28 @@ exports[`<SideBar /> SideBar SnapShot renders SideBar correctly 1`] = `
           role="group"
         >
           <button
-            className="btn btn-secondary"
+            className="sc-bdVaJa btn-block bDWFJH btn btn-secondary"
             onClick={[Function]}
             type="button"
           >
             Worker
           </button>
           <button
-            className="btn btn-secondary"
+            className="sc-bdVaJa btn-block bDWFJH btn btn-secondary"
             onClick={[Function]}
             type="button"
           >
             Drone
           </button>
           <button
-            className="btn btn-secondary"
+            className="sc-bdVaJa btn-block bDWFJH btn btn-secondary"
             onClick={[Function]}
             type="button"
           >
             Queen
           </button>
           <button
-            className="btn btn-danger"
+            className="sc-bwzfXH btn-block uTxCW btn btn-danger"
             onClick={[Function]}
             type="button"
           >

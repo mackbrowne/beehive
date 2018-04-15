@@ -2,7 +2,9 @@
 import React from 'react';
 
 // Components
-import { Container, Row, Col, ButtonGroup, Button } from 'reactstrap';
+import { Container, Row, Col, ButtonGroup } from 'reactstrap';
+
+import { GameButton, QuitButton } from './SideBar.style';
 /**
  * A list of field rows with a header.
  *
@@ -22,12 +24,10 @@ const SideBar = ({ numberOfBees, createBee, removeAllBees }) => {
         <Row>
           <Col>
             <ButtonGroup size="sm">
-              <Button onClick={createWorker}>Worker</Button>
-              <Button onClick={createDrone}>Drone</Button>
-              <Button onClick={createQueen}>Queen</Button>
-              <Button onClick={removeBees} color="danger">
-                X
-              </Button>
+              <GameButton onClick={createWorker}>Worker</GameButton>
+              <GameButton onClick={createDrone}>Drone</GameButton>
+              <GameButton onClick={createQueen}>Queen</GameButton>
+              <QuitButton onClick={removeBees}>X</QuitButton>
             </ButtonGroup>
           </Col>
         </Row>
