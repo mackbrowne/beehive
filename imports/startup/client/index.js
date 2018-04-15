@@ -3,7 +3,8 @@ import React from "react";
 import { Meteor } from "meteor/meteor";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import createHistory from "history/createBrowserHistory";
+import { ConnectedRouter } from "react-router-redux";
 
 // Libraries
 import "bootstrap/dist/css/bootstrap.css";
@@ -15,16 +16,18 @@ import configureStore from "../../ui/configureStore";
 // Initial Actions
 import initAppRequest from "../../ui/actionCreators/generic/init";
 
+const history = createHistory();
+
 // Make redux initial store
-const store = configureStore();
+const store = configureStore({}, history);
 
 // Actual Rendering Function
 const renderApp = () =>
   render(
     <Provider store={store}>
-      <BrowserRouter>
+      <ConnectedRouter history={history}>
         <AppLayout />
-      </BrowserRouter>
+      </ConnectedRouter>
     </Provider>,
     document.getElementById("render-target")
   );
