@@ -29,7 +29,7 @@
     "redux-saga": "0.16.0",
     "request": "^2.85.0",
     "reselect": "3.0.1",
-    "simpl-schema": "1.5.0",
+    "simpl-schema": "1.5.1",
     "styled-components": "^3.2.5",
     "underscore": "1.9.1"
   },
