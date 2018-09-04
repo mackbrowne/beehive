@@ -38,7 +38,7 @@
     "@babel/preset-env": "^7.0.0-beta.44",
     "@babel/preset-flow": "^7.0.0-beta.44",
     "@babel/preset-react": "^7.0.0-beta.44",
-    "autoprefixer": "9.1.4",
+    "autoprefixer": "9.1.5",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "8.2.3",
     "babel-jest": "^22.4.3",
