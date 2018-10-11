@@ -48,7 +48,7 @@
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "7.7.0",
-    "husky": "1.1.1",
+    "husky": "1.1.2",
     "jest": "22.4.3",
     "jest-css-modules": "^1.1.0",
     "jest-meteor-stubs": "github:mackbrowne/jest-meteor-stubs#master",
