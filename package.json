@@ -52,7 +52,7 @@
     "jest": "22.4.3",
     "jest-css-modules": "^1.1.0",
     "jest-meteor-stubs": "github:mackbrowne/jest-meteor-stubs#master",
-    "lint-staged": "^8.1.1",
+    "lint-staged": "^8.1.2",
     "prettier": "^1.12.0",
     "react-test-renderer": "^16.3.1",
     "redux-devtools": "3.4.1",
